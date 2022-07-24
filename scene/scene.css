@@ -1,0 +1,45 @@
+.A{
+    height: 170px;
+    display: flex;justify-content: space-around;
+    overflow: hidden;background: skyblue;
+    animation:x 3s alternate ease-out forwards; 
+}
+.a1,.a2{
+    position: relative;height: 300px;top: 63px;
+    height:300px;width: 300px;
+    background: brown;border: 1px solid brown;
+    transform: rotate(45deg);
+}
+.B{
+    position: relative;top:-1px;left: 37.5em;
+    background: yellow;border-radius: 64px;
+    height: 8em;width: 8em; 
+    animation:y 3s alternate ease-out forwards; 
+}
+.C{background: green;}
+.c1{height:40em;width:20em;position: relative;background: blue;left:33em;}
+.D {position: relative;top: 11em;left: 37.5em;
+background: white;border-radius: 64px;
+height: 8em;width: 8em;animation:z 3s alternate ease-out forwards;
+}
+@keyframes x{
+    20%{background: #00a6ff;}
+    40%{background: #028ac4}
+    60%{background: #5463ff}
+    80%{background: #acacac}
+    100%{background: #000000}   
+}
+@keyframes y{
+    20%{background: yellow;}
+    40%{background: #ffd607;top:25px}
+    60%{background: #ffa200;top:54px}
+    80%{background: #ff8400;top:92px}
+    100%{background: #ff6200;top:200px;}   
+}
+@keyframes z{
+    20%{top:8em}
+    40%{top:6em}
+    60%{top:4em}
+    80%{top:2em}
+    100%{top:0em}   
+}

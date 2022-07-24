@@ -1,0 +1,67 @@
+body div{
+    border: 1px solid black;
+    height: 40px;
+    width: 215px;
+}
+.element_1{
+    padding: 10px 10px 0 10px;
+}
+.element_1 p{
+    padding-left: 10px;
+    width: 220px;
+    margin-top: 13px;
+    border-top-width: 10px;
+    position: absolute;
+    top: 7px;
+}
+input[type="checkbox" i]{
+    opacity: 0;
+}
+h1{
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    top: -12px;
+    left: 13%;
+    padding-left: 10px;
+    cursor: pointer;
+}
+li{
+    list-style: none;
+}
+ul{
+    border-bottom: 10px solid #dadada;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+.element_3{
+    width: 100%;
+    padding-left: 0px;   
+}
+.element_3 label{
+    background: #eeeeee;
+    padding-right: 5px;
+    padding-left: 53px;
+    text-align: right;
+    position: absolute;
+    left: 9px;  
+}
+.label2{
+    padding-left:68px !important;
+}
+.element_3 input{
+    width: 48.5%;
+    border: 0;
+    border: none;
+    padding-left: 106px;
+    padding-right: 5px;
+}
+.element_3 input, .element_3 label{
+    border-bottom:0.2px solid black;
+}
+.element_2, .element_3{
+   opacity: 0;
+}
+
+

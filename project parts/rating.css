@@ -1,0 +1,45 @@
+.Rating{ 
+    margin: 20px;
+    border:1px solid #ddd;
+    position: relative;
+    display: inline-block; 
+    padding:0px 40px 0px 15px; 
+    border:1px solid #ddd }
+
+.Rating b{ 
+   
+    line-height:35px;
+    padding-right:10px;
+     height: 35px; 
+    font-size: 12px; 
+    display: inline-block;
+    border-right: 1px solid #ddd; 
+    margin-right: 10px;}
+
+.Rating input{ 
+    ;
+}
+
+   .Rating label{
+       display: inline-block; 
+       vertical-align: middle; 
+       font-size: 1.5em; 
+       line-height: 35px; 
+       cursor: pointer;
+       content: '/f006';
+       color: rgb(63, 116, 196); 
+    }
+
+   .Rating input:checked:after{ 
+       padding:0px 10px; 
+       text-align: center; 
+       top: 5px; 
+       position: absolute;
+        right: 5px; 
+       line-height: 25px ; 
+       width: 10px; 
+       border:1px solid #ddd; 
+       border-radius: 4px; 
+       content: attr(value); 
+       display: block;
+   }

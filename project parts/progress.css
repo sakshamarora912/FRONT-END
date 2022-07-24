@@ -1,0 +1,30 @@
+div{
+    background: black;
+    border-radius: 34px;
+    width: 36%;
+    height: 40px;
+}
+.bar{
+    color: white;
+    border-radius: 34px;
+    position: absolute;
+    top: 11px;
+    left: 1%;
+    width: 0%;
+    height: 28px;
+    margin: 2px;
+    background: blue;
+    display: flex;
+    justify-content: end;
+    align-items: middle;
+    align-items: center;
+    animation: bar-anime 4s forwards ease;
+}
+@keyframes bar-anime {
+    0%{
+        width:0%;
+    }
+   100%{
+       width:34.5%;
+   }
+}

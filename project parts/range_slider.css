@@ -1,0 +1,63 @@
+
+
+.range{
+   height:80px;
+   width:300px;
+   background: white;
+   border-radius: 2%;
+   padding:0 40px 0 50px;
+}
+.range .field{
+    position: relative;;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+    top: 20px;
+}
+.range .field input{
+  appearance: none;
+  height:3px;
+  width:100%;
+  background:grey;
+  border-radius:5px;
+  outline:none;
+}
+.value{
+    position: absolute;
+}
+.left{
+   left:-13px;
+}
+.right{
+ right:-30px;
+}
+.slider:hover{
+    opacity: 1;
+}
+.slidervalue{
+    position:relative;
+    width:100%
+  }
+  .slidervalue span{
+    position: absolute;
+    background: grey;
+    color: white;
+    height: 20px;
+    width: 20px;
+    left: -24px;
+    top: -16px;
+    margin: 2px;
+    padding: 10px;
+    z-index: 2;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    transform: rotate(45deg);
+    border-top-left-radius: 50%;
+    transform: rotate(45deg) scale(0);
+    transform-origin: bottom;
+    transition: transform 0.3s ease-in-out;
+  }
+  .slidervalue span.show{
+    transform: rotate(45deg) scale(1); 
+  }

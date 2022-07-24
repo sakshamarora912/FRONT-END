@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html{background-color: white;}
+  body{background: black;color: white;margin: 8em 15em;}
+  .part1{display: flex;justify-content:space-around;}
+  .restart{font-size: 1.5em; padding: .2em; background: white;color: black;}
+  .bot{font-size: 4em;text-align: center;height: 1em;width: 1em;color: black;position: absolute;background: white;font-weight: bolder;top: 2.4em;left: 9em;}
+  #human{color: white;background: black; border: 2px solid white;width:7em;height:2em;font-size: 2em;}
+</style>
+<body>
+    <section class="part1"><button class="again">Again</button><h4>number between 1 to 20 </h4></section>
+    <h1 style="text-align: center;">Guess The Number!</h1><br>
+    <hr><br><br>
+    <h1 class="bot">?</h1>
+    <section style="text-align: center;"><input type="number" min="1" max="20" name="guess" id="human" ><br><br><button class="check">Check!</button></section>
+    <h2 style="text-align: center;" class="score">score : 20</h2>
+    <section><h3 style="text-align: center;" class="answer"></h3</section>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+     //var bot = Math.floor(Math.random()*20)+1;
+    // var human = document.querySelector('#human').value;
+    // console.log(bot);
+    // document.querySelector(".check").click(function(){
+    // if (human! || human = ''){{document.querySelector('.answer').html("enter a number!")}}
+    // else if(human > bot && human < 20){ document.querySelector('.answer').html("too large")}
+    // else if(human>20){document.querySelector('.answer').html("enter number between 1 to 20")}
+    // else if(human < bot || human < 20){document.querySelector('.answer').html("too small")}
+    // else if(human < 1){document.querySelector('.answer').html("enter number between 1 to 20")}
+    // else if(human==bot){document.querySelector('.answer').html("correct");document.querySelector('.bot').html(bot)}
+    // });
+    
+    var bot = Math.floor(Math.random()*20)+1;
+    console.log(bot);
+    var score = 20;
+
+    $(".check").click(check);
+
+    function check(){
+    // if (parseInt($('#human').val()) = ''){{$('.answer').html("enter a number!")}}
+     if(parseInt($('#human').val()) > bot && parseInt($('#human').val())< 20){ score--; $('.answer').html("too large");$('.score').html('score' + score)}
+    else if(parseInt($('#human').val())>20){$('.answer').html("enter number between 1 to 20")}
+    else if(parseInt($('#human').val()) < bot && parseInt($('#human').val()) < 20){score--;$('.answer').html("too small");$('.score').html('score' + score)}
+    else if(parseInt($('#human').val()) < 1){$('.answer').html("enter number between 1 to 20")}
+    else if(parseInt($('#human').val())==bot){
+        $('.answer').html("correct");
+        $('.bot').html(bot)
+        // $('.bot').delay(5000).html('?');
+        // $('.answer').delay(5000).html('');
+        // $('#human').delay(5000).val('');
+        // var bot = Math.floor(Math.random()*20)+1;
+        // check();
+    }}
+
+    $(".again").click(function(){
+        var bot = Math.floor(Math.random()*20)+1;
+        console.log(bot);
+        $('.answer').html("");$('.bot').html("?");
+        $('#human').val('');
+        $('.score').html('score : 20')
+    });
+
+
+
+//     var bot = Math.floor(Math.random()*20)+1;
+// console.log(bot);
+// $(".check").click(function(){
+// if(parseInt($('#human').val()) > bot){$('.answer').html("too large")}
+// else if(parseInt($('#human').val()) < bot){$('.answer').html("too small")}
+// else{$('.answer').html("correct");$('.bot').html(bot)}
+// });
+</script>
+</html>
