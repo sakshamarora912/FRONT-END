@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    section{height:27em; width:20em;margin:auto}
+    input{margin: 16px}
+    .flex{display: flex;}
+</style>
+<body style="background: #f7cb0b;"> 
+    <section style="background: white;color: black;">
+        <div class="flex"><input type="checkbox"><p>this is an inbox layout</p></div>
+        <div class="flex"><input type="checkbox"><p>check one item</p></div> 
+        <div class="flex"><input type="checkbox"><p>hold down your shift key</p></div>
+        <div class="flex"><input type="checkbox"><p>tcheck a lower box</p></div>
+        <div class="flex"><input type="checkbox"><p>everything in netween should alo be checked</p></div>
+        <div class="flex"><input type="checkbox"><p>try di it with out any librares</p></div>
+        <div class="flex"><input type="checkbox"><p>just regulat js</p></div>
+        <div class="flex"><input type="checkbox"><p>good luck</p></div>
+    </section>
+    <script>
+        let lastchecked;
+        let checkbox=document.querySelectorAll('input[type=checkbox]');
+        let  inbetween=false;
+        function checkboxhandle(e){
+            if(e.sfiftkey && this.checked){
+                checkbox.forEach(checkbox=>{
+                    console.log(checkbox);
+                if(checkbox==this && checkbos ==lastchecked){
+                    inbetween=!inbetween;
+                }
+                if(inbetween){checkbox.checked=true}
+                })
+            }
+        }
+        checkbox.forEach(checkbox=>addEventListener('click',checkboxhandle))
+    </script>
+</body>
+</html>

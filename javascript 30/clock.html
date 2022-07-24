@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .clock{margin: 0 auto;border: 5px solid black;border-radius:11em;width:18em;height:18em;justify-content: center;align-items: center;}
+    .hour,.min,.sec{height:2px;width:8em;color: black; background: black; position:relative; top: 50.5%; left:5%; transform: rotate(90deg);transform-origin: right; transition: 1sec;}
+    .min{width:8.5em;height:3px;left:2.1%}
+    .hour{width:6em;height:5px;top:47%;left:16%}
+    h2{width:1em; height:1em;border:1px solid black;margin:.1em;position:relative;font-weight: 300;text-align: center;}
+    .hourtime{top:70%;left:29%;}
+    .mintime{top:60%;left:41%;}
+    .sectime{top:50%;left:55%;}
+    .time{font-size: .6em;position:relative;top:35%;left:40%}
+</style>
+<body>
+    <div>
+    <div class="clock">
+        <div class="sec"></div>
+        <div class="min"></div>
+        <div class="hour"></div>
+        <div class="time">QUARTZ</div>
+        <h2 class=" hourtime"></h2><h2 class="mintime"></h2><h2 class="sectime"></h2>
+    </div>
+    <script>
+        let second_hand=document.querySelector('.sec'); 
+        let min_hand=document.querySelector('.min');
+        let hour_hand=document.querySelector('.hour');
+
+        function setdate(){
+            let time=new Date();   
+
+            let second=time.getSeconds();
+            let secdegree=((second/60)*360)+90;
+            second_hand.style.transform=`rotate(${secdegree}deg)`;
+
+            let min=time.getMinutes();
+            let mindegree=((min/60)*360)+90;
+            min_hand.style.transform=`rotate(${mindegree}deg)`;
+
+            let hour=time.getHours();
+            let hourdegree=(30*hour)+90;
+            console.log(hourdegree);
+            hour_hand.style.transform=`rotate(${hourdegree}deg)`;
+
+            document.querySelector('.hourtime').innerHTML=hour;
+            document.querySelector('.mintime').innerHTML=min;
+            document.querySelector('.sectime').innerHTML=second;
+
+        }
+        setInterval(setdate,1000)
+    </script>
+</body>
+</html>

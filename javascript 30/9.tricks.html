@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p onclick="makrgreen()">xBREAKxDOWN</p>
+</body>
+<script>
+    let dogs=[{name:'oreo',age:2},{name:'jack',age:1}]
+    function makrgreen(){
+        let change=document.querySelector('p');
+        change.style.color="#BADA55";
+        change.style.fontSize="3em";
+    }
+    console.log('hello');
+    console.log('Hello I am a %s string!')
+    console.log('%c HELLO I AM SAKSHAM','font-size:1em,background:red;')
+    console.warn("DANGER");
+    console.error("opps")
+    console.info("i'm saksham")
+
+    let p=document.querySelector('p');
+    console.clear();
+    console.log(p);
+    console.dir(p);
+    console.assert(p.classList.contains('ouch'),'this is wrong!','this is wrong!');
+    dogs.forEach(dog=>{
+        console.groupCollapsed(`${dog.name}`)
+        console.log(`this my ${dog.name}`)
+        console.log(` ${dog.name} is ${dog.age} year old `)
+        console.groupEnd(`${dog.name}`);
+        console.count('Wes');
+    console.count('Wes');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Wes');
+    console.count('Steve');
+    console.count('Wes');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Steve');
+    
+    // console.time('fetching data');
+    // fetch('https://api.github.com/users/wesbos')
+    //   .then(data => data.json())
+    //   .then(data => {
+    //     console.timeEnd('fetching data');
+    //     console.log(data);
+    //   });
+
+    console.table(dogs);
+    })
+</script>
+</html>

@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+    <style>
+        .main-key{height:100%; background:black;display: flex;flex-direction: row; justify-content: center;align-items: center;}
+        .key{background:black;color:white;display: flex;flex-direction:column;border:2px solid white;margin:.8em; padding:.6em;transition:.2s;}
+         kbd{text-align: center;}
+        .play{margin:1em;border-color:yellow;box-shadow:0 0 10px yellow;font-weight: bold;font-size: 1.2em;} 
+    </style>
+</head>
+<body>
+    <div class="main-key">
+        <div data-key="65" class="key"><kbd>A</kbd><span>clap</span></div>
+        <div data-key="83" class="key"><kbd>S</kbd><span>drum</span></div>
+        <div data-key="68" class="key"><kbd>D</kbd><span>hihat</span></div>
+        <div data-key="70" class="key"><kbd>F</kbd><span>kick</span></div>
+        <div data-key="71" class="key"><kbd>G</kbd><span>openhat</span></div>
+        <div data-key="73" class="key"><kbd>I</kbd><span>snare</span></div>
+
+        <audio data-key="65" src="sound/clap.wav"></audio>
+        <audio data-key="83" src="sound/drum.wav"></audio>
+        <audio data-key="68" src="sound/hihat.wav"></audio>
+        <audio data-key="70" src="sound/kick.wav"></audio>
+        <audio data-key="71" src="sound/openhat.wav"></audio>
+        <audio data-key="73" src="sound/snare.wav"></audio>
+    </div>
+    <script>
+        window.addEventListener('keydown',function(e){                     //e => predined
+            console.log(e.keyCode);                                         
+            let audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);     // imp
+            let key = document.querySelector(`.key[data-key="${e.keyCode}"]`);        // imp
+            console.log(audio);
+            audio.currentTime=0;
+            audio.play();
+            key.classList.toggle('play');
+        });   
+    
+        let keys =  document.querySelectorAll('.key');
+        keys.forEach(key=>key.addEventListener('transitionend',function(e){         // imp
+        this.classList.remove('play');
+        }));
+        </script>
+</body>
+</html>

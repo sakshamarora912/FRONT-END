@@ -1,0 +1,22 @@
+.dice-game{
+    width:40%;height:400px;
+    display:flex;justify-content: space-around;
+    text-align: center;margin:5em auto; box-shadow: -10px -10px 18px black;
+}
+.player-0{background: white;width:50%;padding:2em;}
+.bgcolor{background-color: wheat;}
+.player-1{width:50%; padding:2em;}
+.player-name-0, .player-name-1{font-size: 3em;}
+.player-score-0, .player-score-1{ font-size: 4em;}
+.player-0-current, .player-1-current{
+    margin:0 auto;margin-top: 5em;
+    width:5em;background: red;
+}
+.total-score-0,.total-score-1{padding:.4em;font-size: 1.5em;}
+.new-game, .hold, .dice-roll, .dice_1,.dice_2{position: absolute; margin:.6em;}
+.hold{bottom:29%;}
+.dice-roll{bottom:39%;}
+.dice_1{bottom:47%;height: 3.5em;display: none;}
+.dice_2{top:30%;height: 3.5em;display: none;}
+.hold:focus,.dice-roll:focus,.new-game:focus{display: none;}
+.winner{color: red;font-weight: bolder;}

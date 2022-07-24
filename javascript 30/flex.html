@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{display:flex;flex-direction:row;min-height: 100vh;min-width:100vw;}
+    .panel>*{flex:1 0 auto;transition: transform 0.5s;}
+    .panel{display: flex;flex-direction:column;justify-content: center;align-items: center;flex:1;overflow: hidden; transition:font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11), background 0.2s;}
+    .panel_1{background:url(./images/Demolished10522_20200501_203100_008.jpg) ;}
+    .panel_2{background:url(./images/Down\ fall9385_rectangle.jpg) ;}
+    .panel_3{background:url(./images/Dusky\ Road\ Trip17679_rectangle.jpg) ;}
+    .panel_4{background:url(./images/Eventide14221_rectangle.jpg);}
+    .panel_5{background:url(./images/Festive\ Evening11310_20200501_202600_211.jpg);}
+     p{font-size: 1em;}   h1{font-size:2em;}
+    .panel > *:first-child { transform: translateY(-200%); }
+    .panel.open-active > *:first-child { transform: translateY(0); }
+    .panel > *:last-child { transform: translateY(200%); }
+    .panel.open-active > *:last-child { transform: translateY(0); }
+    .open-active{flex: 5 !important;;font-size:4em !important;;}
+</style>
+<body>
+    <section class="container">
+        <div class="panel panel_1"><p>HEY</p><h1>LET'S</h1><P>DANCE</p></div>
+        <div class="panel panel_2"><p>GIVE</p><h1>TAKE</h1><P>RECEIVE</p></div>
+        <div class="panel panel_3"><p>EXPERIENCE</p><h1>IT</h1><P>TODAY</p></div>
+        <div class="panel panel_4"><p>GIVE</p><h1>ALL</h1><P>YOU CAN</p></div>
+        <div class="panel panel_5"><p>LIFE</p><h1>IN</h1><P>MOTION</p></div>
+    </section>
+</body>
+<script>
+    let open=document.querySelectorAll('.panel');
+    function toggleopen(){
+       this.classList.toggle('open-active')
+    }
+    open.forEach(panel =>panel.addEventListener('click',toggleopen));
+</script>
+</html>
