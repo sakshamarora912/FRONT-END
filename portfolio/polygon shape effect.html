@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>polygon_shape_effect</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <style>
+        body{height:100em;}
+        .poly_1{position: fixed;top:8em;left:30em;transform: scale(.6);}
+        .poly_2{position: fixed;top:4em;left:10em;transform: scale(.6);}
+        polyline{fill:none;stroke:green ;stroke-width:15;stroke-dashoffset:1000;stroke-dasharray:1000}
+        .heading{color:yellow;border:2px solid transparent;position:fixed;}
+        .span{height: 3em;width:10em;background-color: red;;}
+        .text{fill:red}
+        .text1{font-size:3em;font-weight:bolder;border:3px solid white;transform: translateX(-90px);}
+        .text2{font-size:3em;font-weight:bolder;border:3px solid white;transform: translateX(69px);}
+    </style>
+<body >
+<div class="poly_1">
+    <svg height="400" width="500">
+        <polyline points=" 233.2,189.5 295.9,298 463.8,7.3 128,7.3 191.9,118.2 "></polyline>
+            <rect width="350" height="70" x="300" y="30" style="fill:white;stroke-width:3;" />
+            <text class="text1" x="250" y="80">SAKSHAM</text>
+            <text class="text2" x="120" y="170">ARORA</text>
+    </svg>
+</div>  
+<div class="poly_2">
+    <svg height="450" width="500">
+        <polyline class="heading" points="199.1,74.2 164.9,15 17.1,271 312.7,271 240.7,146.3 "></polyline>
+        <polyline class="heading_2"points="256.8,364 293.7,428 441.4,172 145.9,172 216.2,293.8 "></polyline>
+            <text class="text1" x="200" y="120">SAKSHAM</text>
+            <text class="text2" x="100" y="350">ARORA</text>
+    </svg>
+</div>  
+</body>
+<script>
+    var lineHeight=parseInt($('polyline').css("strokeDashoffset"));
+    var line=parseInt($('.text1').css("transform"));
+    window.onscroll=function(){
+       var winHeight=$(window).height();
+       var DocHeight=$(document).height();
+       var scrollTop=$(window).scrollTop();
+       var trackLength=DocHeight-winHeight;
+       var pctScolled =(Math.floor(scrollTop/trackLength*200));
+       var total= lineHeight-2*pctScolled;
+       var move1=-90+pctScolled/4;
+       var move2=69-pctScolled/4;
+       if(pctScolled>0){  
+                $('polyline').css({"strokeDashoffset":lineHeight+5*pctScolled}); 
+                $('.text1').css("transform","translate("+move1+"px)");      
+                $('.text2').css("transform","translate("+move2+"px)");          
+            }
+        }
+</script>
+</html>

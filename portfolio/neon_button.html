@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <title>neon_button</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<style>
+    #button{width:12em;height: 3em;border: 2px solid #808080;color: white;background: #2e2e2e;}
+    .square{height:.6em;width:.6em;background: #dc0d0d;position: relative;}
+    .sq1,.sq2{border:2px solid #dc0d0d;background-color: white;}
+    .sq3,.sq4{background:  #dc0d0d;visibility:hidden}
+    .sq1{top: -2.8em;left: -0.3em;}
+    .sq2{top: -1.3em;left: 9.5em;}
+    .inside{display: flex;position:absolute;transform: rotate(12deg); left: 0em;top: 1.5em;justify-content: space-between;width: 11em;visibility:hidden}
+</style>
+<body>
+    <div class="button" >
+        <button id="button" onmouseover="move()" onmouseout="mouseleave()"> CLICK</button>
+        <div class="square sq1"></div>
+        <div class="square sq2"></div>
+        <div class="inside">
+            <div class="square sq3"></div>
+            <div class="square sq4"></div>
+        </div>    
+    </div>
+</body>
+<script>
+    function move() {
+    var tl = gsap.timeline();
+    tl.to("#button", {duration: 0.1, border:"2px solid #dc0d0d",boxShadow:"2px 2px 8px #dc0d0d",color:"#dc0d0d",ease: "ease-out",cursor:"pointer"},".1")
+      .to(" .sq1", {duration: 0.1,transform:"translateX(9.7em) rotate(45deg)",background:"#dc0d0d",border:"2px solid #dc0d0",boxShadow:"1px 1px 2px red",ease: "ease-out",},".1")
+      .to(" .sq2", {duration: 0.1,transform:"translateX(-9.7em) rotate(45deg)",background:"#dc0d0d",border:"2px solid #dc0d0",boxShadow:"1px 1px 2px red",ease: "ease-out",},".1")
+      .to(" .sq3", {duration: 0.1,transform:"translateX(10em) rotate(50deg)",background:"white",border:"2px solid #dc0d0d",boxShadow:"1px 1px 2px red",ease: "ease-out",opacity:1,visibility:"visible"},".1")
+      .to(" .sq4", {duration: 0.1,transform:"translateX(-10em) rotate(50deg)",background:"white",border:"2px solid #dc0d0d",boxShadow:"1px 1px 2px red",ease: "ease-out",opacity:1,visibility:"visible"},".1")
+  }
+  function mouseleave() {
+    var tl = gsap.timeline();
+    tl.to("#button", {duration: 0.1, border:"2px solid #808080",boxShadow:"2px 2px 8px transparent",color:"white",ease: "ease-out",},".1")
+      .to(" .sq1", {duration: 0.1,transform:"translateX(0em) rotate(0deg)",background:"#dc0d0d",border:"2px solid #dc0d0",boxShadow:"1px 1px 2px red",ease: "ease-out",},".1")
+      .to(" .sq2", {duration: 0.1,transform:"translateX(0em) rotate(0deg)",background:"#dc0d0d",border:"2px solid #dc0d0",boxShadow:"1px 1px 2px red",ease: "ease-out",},".1")
+      .to(" .sq3", {duration: 0.1,transform:"translateX(0em)",background:"#dc0d0d",border:"2px solid #dc0d0d",boxShadow:"1px 1px 2px transparent",ease: "ease-out",opacity:0,visibility:"hidden"},".1")
+      .to(" .sq4", {duration: 0.1,transform:"translateX(0em)",background:"#dc0d0d",border:"2px solid #dc0d0d",boxShadow:"1px 1px 2px transparent",ease: "ease-out",opacity:0,visibility:"hidden"},".1")
+  }     
+</script>
+</html>

@@ -1,0 +1,171 @@
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="portfolio.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+        <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="portfolio.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <section class="section_1">
+        <div class="navbar">
+            <div class="bubblewrapper">
+                <div class="bubble" id="bubble_1"><span class="icon"><i class="fas fa-home"></i></div>
+                <div class="bubble" id="bubble_2"><span class="icon"><i class="fas fa-home"></i></div>
+                <div class="bubble" id="bubble_3"><span class="icon"><i class="fas fa-home"></i></div>
+                <div class="bubble" id="bubble_4"><span class="icon"><i class="fas fa-home"></i></div>
+            </div>
+            <div class="menu_wrapper">
+                <div id="menu_1" class="menuElement" onclick="move('1', '1.3em')"><i class="fas fa-home"></i></div>
+                <div id="menu_2" class="menuElement" onclick="move('2', '6.3em')"><i class="fas fa-home"></i></div>
+                <div id="menu_3" class="menuElement" onclick="move('3', '11.3em')"><i class="fas fa-home"></i></div>
+                <div id="menu_4" class="menuElement" onclick="move('4', '16.3em')"><i class="fas fa-home"></i></div>
+            </div>
+        </div>
+        <div class="bgwrapper">
+            <div class="bg"></div>
+            <div class="bgbubble"></div>
+        </div>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+              <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+              </filter>
+            </defs>
+          </svg>
+        </section>
+        <section class="section_2">
+          <p>Saksham Arora</p>
+          <span>I </span><span id="text"></span>
+        </section>
+        <section class="section_3">
+            <span class="start_lang"> < languague > </span>
+            <span class="end_lang"> < / languague > </span>
+            <div class="middle">
+                <div class="block move_1">HTML</div>
+                <div class="block move_1">CSS</div>
+                <div class="block move_1">JS</div>
+                <div class="block move_1">JQUERY</div>
+            </div>
+            <div class="left">
+                <div class="block move_2">Bootstrap</div>
+                <div class="block move_2">GASP</div>
+            </div>
+            <div class="right">
+                <div class="block move_3">SQL</div>
+                <div class="block move_3">Angular</div>
+            </div>    
+            <div class="left-most">
+                <div class="block move_4">C++</div>
+            </div>
+            <div class="right-most">
+                <div class="block move_4">Java</div>
+            </div>
+        </section>  
+        <div class="section_4">
+            <div id="pos_1"> < Projects > </div>
+            <div class="box" style="background: url(./images/project_1.png);background-size: contain;"></div>
+            <div class="box_text">
+                <h1>LOCALOST</h1>
+                <p style="top:-12em;">Static-website</p>
+                <p style="top:-12em;">jquery, CSS, HTML</p>
+            </div>
+            <div class="number">01</div>
+
+            <div class="box" style="background: url(./images/project_2.png);background-size: contain;"></div>
+            <div class="box_text">
+                <h1>LOCALOST</h1>
+                <p style="top:-12em;">Static-website</p>
+                <p style="top:-12em;">jquery, CSS, HTML</p>
+            </div>
+            <div class="number">02</div>
+
+            <div class="box" style="background: url(./images/project_3.png);background-size: contain;"></div>
+            <div class="box_text">
+                <h1>LOCALOST</h1>
+                <p style="top:-12em;">Static-website</p>
+                <p style="top:-12em;">jquery, CSS, HTML</p>
+            </div>
+            <div class="number">03</div>
+
+            <div class="box" style="background: url(./images/project_3.png);"></div>
+            <div class="box_text">
+                <h1>LOCALOST</h1>
+                <p style="top:-12em;">Static-website</p>
+                <p style="top:-12em;">jquery, CSS, HTML</p>
+            </div>
+            <div class="number">04</div>
+        </div>
+        <!-- <section class="section_3">
+            <div class="poly_2">
+                <svg height="450" width="500">
+                    <polyline class="heading" points="199.1,74.2 164.9,15 17.1,271 312.7,271 240.7,146.3 "></polyline>
+                    <polyline class="heading_2"points="256.8,364 293.7,428 441.4,172 145.9,172 216.2,293.8 "></polyline>
+                        <text class="text1" x="200" y="120">SAKSHAM</text>
+                        <text class="text2" x="100" y="350">ARORA</text>
+                </svg>
+            </div> 
+            <div>Projects</div>
+        </section> -->
+        <!-- <section class="section_4">
+            <div>About</div>
+        </section>
+        <section class="section_5">
+            <div>Contact</div>
+        </section> -->
+    </body>
+    <script>
+        var content = [ " am Front-End Developer", " build interactive websites that run across platforms & devices" ];
+        var Part = 0;   // Current sentence being processed
+        var Part_index = 0; // Character number of the current sentence being processed 
+        var interval_val;// Holds the handle returned from setInterval
+        var element = document.querySelector("#text");// element that holds the text
+        
+        function Type() { 
+            var text =  content[Part].substring(0, Part_index + 1);
+            element.innerHTML = text; 
+            Part_index++;
+            // If full sentence has been displayed then start to delete the sentence after some time
+            if(text == content[Part]) {
+                clearInterval(interval_val);
+                setTimeout(function() {
+                    interval_val = setInterval(Delete, 50);
+                },1000);
+            }
+        }
+        function Delete() {
+            var text =  content[Part].substring(0, Part_index - 1);
+            element.innerHTML = text;
+            Part_index--;
+        
+            // If sentence has been deleted then start to display the next sentence
+            if(text =='') {
+                clearInterval(interval_val);
+        
+                // If last sentence then display the first one, else move to the next
+                if(Part == (content.length - 1))
+                    Part = 0;
+                else
+                    Part++;
+                    Part_index = 0;
+        
+                setTimeout(function() {  // Start to display the next sentence after some time
+                    interval_val = setInterval(Type, 100);
+                }, 200);
+            }
+        }
+        interval_val = setInterval(Type, 100); // Start the typing effect on load
+
+        $('.box').hover(function() {
+            $(this).css({'filter':'blur(0)','transform':'scale(1)'});
+        })
+    </script>
+    </html>

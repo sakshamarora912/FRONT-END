@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" >
+    <title>side_navbar</title>
+</head>
+<style>
+    .navbar{background: pink; position: absolute;height: 22em;width:3em;padding: 0.2em;top: 9em;}
+    .bubblewrapper{display:flex;justify-content: space-between; position: absolute;flex-direction: column;}
+    .bubble{display: flex;transform: translate(-110%,12%);height: 4em;width: 4em;background: #ffc0cb;z-index: 1;opacity: 0;appearance:none; border-radius: 10em;}
+    #bubble_1{top: 0.7em;margin: 1em;background: #ffc0cb;box-shadow: 4px 4px 4px grey;opacity: 1;transform: translate(15%,12%);}
+    #bubble_1 span{opacity: 1;}
+    .bubble span{padding: 1.5em;opacity: 1;}
+    .bgwrapper{background-color: #fff;filter: url(#goo);width:10em;height:22em;position: absolute;top: 9em;left:4.5em}
+    .bg{background-color: #fff;width:10em;height:22em;position:absolute;left:0em}
+    .bgbubble{position: absolute;top:1.3em;left:-3.5em;background-color: #fff;height:5em;width:5em;border-radius:50%;transform: translateX(0%)}
+    .menu_wrapper{justify-content: space-around;padding: 1em;display: flex;height: 21em;flex-direction: column;}
+    .menu_wrapper #menu_1{opacity: .5;}
+    .menuElement{opacity: 0.5;cursor: pointer;}
+    .menuElement:hover{opacity: 0.7;}
+</style>
+<body>
+    <div class="navbar">
+        <div class="bubblewrapper">
+            <div class="bubble" id="bubble_1"><span class="icon"><i class="fas fa-home"></i></div>
+            <div class="bubble" id="bubble_2"><span class="icon"><i class="fas fa-home"></i></div>
+            <div class="bubble" id="bubble_3"><span class="icon"><i class="fas fa-home"></i></div>
+            <div class="bubble" id="bubble_4"><span class="icon"><i class="fas fa-home"></i></div>
+        </div>
+        <div class="menu_wrapper">
+            <div id="menu_1" class="menuElement" onclick="move('1', '1.3em')"><i class="fas fa-home"></i></div>
+            <div id="menu_2" class="menuElement" onclick="move('2', '6.3em')"><i class="fas fa-home"></i></div>
+            <div id="menu_3" class="menuElement" onclick="move('3', '11.3em')"><i class="fas fa-home"></i></div>
+            <div id="menu_4" class="menuElement" onclick="move('4', '16.3em')"><i class="fas fa-home"></i></div>
+        </div>
+    </div>
+    <div class="bgwrapper">
+        <div class="bg"></div>
+        <div class="bgbubble"></div>
+    </div>
+    
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+            <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+          </filter>
+        </defs>
+      </svg>
+</body>
+<script>
+    function move(id,position){
+        var t1=gsap.timeline();
+            t1.to("#bubble_1",{duration:.1,x:"10%", boxShadow: 'none', ease: "ease-out",opacity:0}, 0)
+              .to("#bubble_2",{duration:.1,x:"35%",boxShadow: 'none', ease: "ease-out",opacity:0}, 0)
+              .to("#bubble_3",{duration:.1,x:"35%",y:"38%",boxShadow: 'none', ease: "ease-out",opacity:0}, 0)
+              .to("#bubble_4",{duration:.1,x:"35%",y:"62%",boxShadow: 'none', ease: "ease-out",opacity:0}, 0)
+              .to(".icon", {duration: 0.05, opacity: 0, ease: "ease-out",}, 0)
+              .to(".bgbubble",{duration: 0.05,top:position,ease: "ease-in-out"}, 0.2)
+              .to(`#bubble_${id}`,{duration: 0.05,X:"-110%", opacity: 1, boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)', ease: "ease-out"}, 0.2)
+              .to(`#bubble_${id}>span`,{duration: 0.05,opacity:1}, '0.1');
+        }
+</script>
+</html>
