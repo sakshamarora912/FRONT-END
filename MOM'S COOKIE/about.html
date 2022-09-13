@@ -1,0 +1,198 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="shared.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="common.css">
+</head>    
+    <style>
+        .part-2{height: 11em;padding: 7em;display: flex;align-items: center;flex-direction: column;justify-content: center;background: #f8dff7;}
+        h1{font-size: 3.5em;margin: 0px;}
+        .part-2 button{width:10em;background:white;color: #ad7dac;font-weight: 600;font-size:1em;border-radius: 8px;border: 0;padding: 10px;margin: 2em 0em;}
+        .part-2 h3{font-size: 1.5em;}
+        .part-3{background: black;color: white;}
+        .part-3,.part-4{display: flex;align-items: center;flex-direction: column;justify-content: center;padding:0 0 2em 0}
+        .part-3 p,.part-4 p{width:65%;font-size: 1.3em;margin: 0 0 1em 0;}
+        .part-3 h1,.part-4 h1{font-size:3em;margin: 1em;text-align: center;}
+        .part-3 span{color: #ad7dac;}
+        .part-4 span{color: black;}
+        .part-4 h1{color: #ad7dac;}
+        .part-5{margin: 2.5em;font-size: 1.5em;}
+        .part-5 p{color: #ad7dac;}
+        .part-6{margin: 0em 12em;}
+        .part-6 img{height:21em}
+        .part-6 div{display:flex;}
+        .part-6 h1{width:13em;font-size: 2.5em;margin: 2em 1em 1em 0}
+        .part-6 p{width: 24em;font-size: 1.2em;}
+        .part-6 button{width:10em;background: #f8dff7;color: black;font-weight: 600;font-size:1em;border-radius: 8px;border: 0;padding: 10px;margin: 2em 0em;}
+        p{width: 22em;text-align: center;margin: 0 auto;font-size: .7em;width: 7em;}
+        nav{display: flex;flex-direction: column;width: 6em;}
+        img{height:4em}
+        .part-7{padding:1em 8em}
+        .part-7 h1{width: 5em;margin: 0em 4.5em;font-size: 1.5em;}
+        .part-7 h2{margin: 1em 12em;font-size:2.5em;width:10em}
+        .part-7 img{height:18em;width:16em;padding:1em 2em}
+        .part-7 nav{width: 20em;}
+        .part-7 h3{width: 10em;text-align: center;margin-left: 3em;}
+        .part-7 button{width:10em;background:#f8dff7;color: #ad7dac;font-weight: 600;font-size:.8em;border-radius: 8px;border: 0;padding:7px;margin: 1em 0 1em 7em;}
+    </style>
+<body>
+    <section class="part-0">
+        <nav id="profile"><a>My Profile</a></nav>
+        <nav id="faq"><a>FAQs</a></nav>
+        <nav style="cursor: pointer;"class="contact">Contact</nav>
+        <address class="address">
+            <a href="tel: 9953963660">call</a>
+            <a href="mailto: its.saksham912@gmail.com">email</a>
+       </address>
+        <nav id="work"><a>Work with me</a></nav>
+        <nav style="display:flex;justify-content: flex-end;width:73%;">
+            <span style="font-size: 1.4em; color: #ff5db6; margin-right: 1.5em ;">Get Social</span>
+            <a href="#"style="width:3.5em"><img src="./images/insta.png" style="height: 25;"></a>
+            <a href="#"style="width:3.5em"><img src="./images/telegram.png" style="height: 25;"></a>
+            <a href="#"style="width:3.5em"><img src="./images/discord.jpg" style="height: 25;"></a>
+        </nav>
+    </section>
+    <section class="part-1">
+        <nav style="padding-right: 3em;padding-top: .5em; color:#079c70;">MOM'S <span style="font-size:3em;color: #f8078b;">Cookie</span></nav> 
+        <div style="display: flex; flex-direction: column;align-items: flex-end">
+            <div class="search-box">
+                <input type="text" placeholder="Seach Here...." class="search-input">
+                <button class="search-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                </button>
+            </div>
+            <div style="display: flex; flex-direction: row;justify-content: flex-end;width:67%"></button><div style="display: flex; flex-direction: row;justify-content: flex-end;width:67%;margin-top: 0.2em">
+            <nav><a href="#" style="font-weight: 700;color: white;background-color: #ff5db6;padding:10px;border-radius: 10px;">Home</a></nav>
+            <nav style="color:#ff5db6;margin-left: 2.5em;"><a href="about.html">About</a></nav>
+            <nav style="color:#ff5db6;margin-left: 1.5em;"><a href="store.html">Store</a></nav>
+            <nav class="cart"><h1>Cart items</h1></nav>
+            <button type="button" class="toggle-cart btn">cart</button>
+        </div>
+        </div>
+    </section>
+    <section class="part-2">
+        <h3>freshly baked on orders</h3>
+        <h1>HANDCRAFTED COOKIES</h1>
+        <p style="color:white;font-size:3em;font-weight: 600;width: 22em;margin-top: 1em;">100% EGGLESS</p>
+        <button>SHOP NOW</button>
+    </section>
+    <section class="part-3">
+          <h1><span>_______</span>About us?<span>_______</span></h1>
+          <p>For the past five years Choco Roost has solely focused on delivering a delectable range of homemade chocolates with the right blend of flavorsome cocoa. Here at Choco Roost, we offer an array of luxury handmade chocolates with exuberant taste, quality, art and texture. Customer satisfaction is our driving force. Thus we not only make a hoard of customized handmade chocolates for various occasions like Birthdays, Diwali, Valentines, Weddings, Baby Showers, Corporate Events but also allow our customer to be a part of the chocolate making process by choosing the ingredients of their choice.</p>
+          <p>The speciality about Choco Roost is that here nothing is impossible. Our USP is the concept of designing your own dream chocolate bar by adding ingredients solely by your own choice and making a chocolate of your own! Customized gifting ideas are one of the most trending things that you can enjoy with us!</p>
+    </section>
+    <section class="part-4">
+         <h1><span>_______</span>Why us?<span>_______</span></h1>
+         <p>Sublime quality, unparalleled taste and an unforgettable experience of handmade chocolates is what we offer at Chocoroost. In choosing us, you are up for a divine experience along with a host of customized chocolates to suit your every mood. We offer a wide range of customized handmade chocolates with the taste that you'll never forget. Our homemade chocolates are made using premium quality chocolate & ingredients. So, What are you waiting for? Indulge yourself in the world of chocolate and treat yourself with our mind-boggling flavours.</p>
+         <p>Try our homemade chocolates once and you will be forced to find reasons to order from us the next time!</p>
+        </section>
+    <section class="part-5">
+        <p style="font-size: 1.2em; width: 22em;">We make Dessets for you on order. Our Dessert are made from scratch, packed beautifully and shipped all across India.</p>
+        <div style="display:flex;margin:2.5em 7em;">
+            <nav><img src="./images/RealIngredients.svg"><p>Real Ingredients</p></nav>
+            <nav><img src="./images/baked-fresh.svg"><p>Baked Fresh</p></nav>
+            <nav> <img src="./images/no-Preservatives.svg"><p>No Preservatives</p></nav>
+            <nav><img src="./images/Finest-Quality.svg"><p>Finest Quality</p></nav>
+            <nav><img src="./images/No-Artificial-Flavouring.svg"><p>No Artificial Flavouring</p></nav>
+            <nav><img src="./images/hande-made.svg"><p>hande made</p></nav>
+            <nav><img src="./images/shipping_2.svg"><p>Ships Pan-India</p></nav>
+        </div>
+    </section>
+    <section class="part-6">
+        <div>
+            <img src="./images/IMG_a.jpg" style="margin-right:4em;margin-top: 4em;">
+            <nav style="width: 29em;">
+                <h1 style="margin-top: 3em;">Cookies Make People Happy</h1>
+                <p style="text-align: left;">Cookies and cupcake are the perfect desserts ever! They are sinfully delicious, can double up as a go to snack or as a perfect post-dinner dessert!Plus, who has ever said no to a cookie or cupcake?</p>
+                <button>See our cookies</button>
+            </nav>
+        </div>
+        <div>
+            <nav style="width: 29em;">
+                <h1 style="margin-top: 3em;">The addiction you can't resist.</h1>
+                <p style="text-align: right;">Love Bite Chocolates is the factory of sizeable handmade chocolates made with an exceptional touch of home.Our chocolate designers bring to you the subtle indulgence of sweetness to your taste buds.  The homemade chocolates are available in diversified tastes, imbued in traditionalism.</p>
+                <button style="margin: 2em 0 2em 18em">try our chocolate</button>
+            </nav>
+            <img src="./images/img_b.png" style="margin-left:4em; margin-top: 4em;">
+        </div>
+        <div>
+            <img src="./images/img_b.png" style="margin-right:4em;margin-top: 4em;">
+            <nav style="width: 29em;">
+                <h1 style="margin-top: 3em;">A Nice Treat For The Little Ones.</h1>
+                <p style="text-align: right;">Cupcake bakes with the highest quality ingredients including valrhona cocoa, callebaut chocolate, madagascar bourbon vanilla, european style sweet cream butter and fresh fruit. Georgetown Cupcake bakes with nuts, wheat, and dairy products on the premises. We strongly caution individuals with severe nut, wheat, and dairy allergies against consuming our cupcakes. Before placing your order, please inform your server if anyone in your party has a food allergy.</p>
+                <button style="margin: 2em 0 2em 18em">try our cupcakes</button>
+            </nav>
+        </div>
+        <div>
+            <nav style="width: 29em;">
+                <h1 style="margin-top: 3em;">Shipped Pan India</h1>
+                <p style="text-align: left;">Our products have been shipped to 900+ locations In India.Wherever you stay, desserts  can reach you in maximum 3-5 days. </p>
+                <button>try our products</button>
+            </nav>
+            <img src="./images/img_c.jpg" style="margin-left:4em;margin-top: 4em;">
+        </div>
+    </section>
+    <!-- <section class="part-5">
+        <h2>Our Best Sellers</h2>
+        <div style="display: flex;">
+            <nav>
+                <img src="./images/IMG_a.jpg" alt="">
+                <h3>Assorted Cookies Tin</h3>
+                <h1>Rs. 650</h1>
+                <button>ADD TO CART</button>
+            </nav>
+            <nav>
+                <img src="./images/IMG_a.jpg" alt="">
+                <h3>Assorted Chocolate box </h3>
+                <h1>Rs. 650</h1>
+                <button>ADD TO CART</button>
+            </nav>
+            <nav>
+                <img src="./images/IMG_a.jpg" alt="">
+                <h3>Classic   (With egg)</h3>
+                <h1>Rs. 650</h1>
+                <button>ADD TO CART</button>
+            </nav>
+            <nav>
+                <img src="./images/IMG_a.jpg" alt="">
+                <h3>Classic Cookies  (With egg)</h3>
+                <h1>Rs. 650</h1>
+                <button>ADD TO CART</button>
+            </nav>
+        </div>
+    </section> -->
+    <!-- <section>
+        <h1>OUR COLLECTION</h1>
+        <nav>
+            <img src="./images/IMG_a.jpg" alt="">
+            <p></p>
+        </nav>
+        <nav>
+            <img src="./images/IMG_a.jpg" alt="">
+            <p></p>
+        </nav>
+        <nav>
+            <img src="./images/IMG_a.jpg" alt="">
+            <p></p>
+        </nav>
+        <nav>
+            <img src="./images/IMG_a.jpg" alt="">
+            <p></p>
+        </nav>
+        <nav>
+            <img src="./images/IMG_a.jpg" alt="">
+            <p></p>
+        </nav>
+        <nav>
+            <img src="./images/IMG_a.jpg" alt="">
+            <p></p>
+        </nav>
+    </section> -->
+</body>
+</html>

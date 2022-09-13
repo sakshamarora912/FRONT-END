@@ -1,0 +1,28 @@
+*{font-family: 'Times New Roman', Times, serif;}
+.search button{width:auto;background-color: transparent;border: 0;}
+.part-0{display:flex;flex-direction:row;border-bottom: 3px solid rgb(219, 219, 219);}
+.part-0 nav{margin:.4em .5em;width:4em;}
+.part-0 #profile{width: 4.5em !important;}
+.part-0 #work{width: 7em !important;}
+.part-0 #faq{width: 2.5em !important;}
+.part-0 .contact{width: 3em !important;}
+.part-0 nav a{width:5.5em}
+.part-0 address{background: rgb(248, 4, 155); border-radius: 9px;padding: 10px;position:absolute;top: 2em;width: 3em;height:2em;left:7.5em;font-size: 1.2em;color: white;display: none;}
+.part-0 address a{text-decoration: none;color: white;}
+.part-1{width:98%;height:7.5em;display:flex;flex-direction:row;justify-content: space-between;background: white;padding:.5em 1em 0 0em;z-index: 100;box-shadow: 0em 0.1em 0.5em pink;}
+.part-1 a{text-decoration: none;font-size: 1.4em;font-weight: 500;color:#ff5db6;}
+.part-1 nav{width:1em;margin:1em 2.4em}
+/* .part-1 div button{background: white;color:#cd47a5; border:0;border-radius: 10px;width: 11em;margin-left: 1em;font-size: 1.3em;    align-self: center;} */
+/* .search{border-radius:15px;width:10em;height: 1em;padding: 0.2em .2em 1em 1em;;margin-bottom:.5em;background:white; border: 1px solid #9b9999;} */
+input:focus-visible{outline:none};
+.toggle_address{display: block;}
+.toggle-cart{color: black;font-size: 2em;background: white;border: none;padding: 0 18px;line-height: 0em;}
+.cart{height:22em ;width:20% !important;background-color: palegreen;position:absolute;right:-1.5em;top:7.5em;border-radius: 1em;opacity:0;cursor: pointer;}
+.visible{opacity:1;transition: all .1s ease-in-out;}
+
+.search-box{position:relative;top:20%;left:2%;transform: translate(-1%,-50%);height:30px;background: white;line-height: 40px;padding:10px;border-radius: 60px;cursor: pointer;}
+.search-input{background-color: transparent; outline:none;border:none;line-height:30px;width:0px;float:left;font-size:1em;transition:0.7s ease;}
+.search-btn{border:none;position:relative;display:flex;justify-content:center;text-decoration:none;background:pink;padding:8px 4px 4px 4px;border-radius: 50%;float: right;color:white;transition: .4s ease;}
+.search-box:hover>.search-input{width:270px;}
+.search-box:hover>.search-input,.search-box{margin:0px 8px;background: pink;color: white;}
+.search-box:hover>.search-btn{height:2.5em;width:3em;color: pink !important;background-color: white !important;border-radius: 3px solid pink;}

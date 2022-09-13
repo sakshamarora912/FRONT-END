@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+</head>
+<body>
+    <style>
+        .search-box{position:absolute;top:50%;left:50%;transform: translate(-50%,-50%);height:60px;background: white;line-height: 40px;padding:10px;border-radius: 60px;cursor: pointer;}
+        .search-input{background-color: transparent; outline:none;border:none;line-height:40px;width:0px;float:left;font-size:1em;transition:0.7s ease;}
+        .search-btn{border:none;position:relative;display:flex;justify-content:center;text-decoration:none;background:pink;padding:12px;border-radius: 50%;float: right;color:white;transition: .4s ease;}
+        .search-box:hover>.search-input{width:240px;}
+        .search-box:hover>.search-input,.search-box{margin:0px 8px;background: pink;color: white;}
+        .search-box:hover>.search-btn{color: pink !important;background-color: white !important;border-radius: 3px solid pink ;}
+    </style>
+    <div class="search-box">
+        <input type="text" placeholder="Seach Here...." class="search-input">
+        <button href="#" class="search-btn"><span class="glyphicon glyphicon-search"></span></button>
+    </div>
+</body>
+</html>

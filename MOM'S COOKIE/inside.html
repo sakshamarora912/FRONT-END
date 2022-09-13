@@ -1,0 +1,175 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="shared.js">
+    <link rel="stylesheet" href="common.css">
+</head>
+<style>
+    body{background: #fdf973;}
+    .flex-container{display: flex;padding:2em;}
+    .flex-container img{width:21em;height:24em;}
+    .flex-container input{width:2em;font-size: 1.2em;font-weight: 300;}
+    .btn{font-size: 1.3em;font-weight:500;border:1px solid #ee062d; background:white;color:#ee062d;border-radius: 10px;margin:.5em;}
+    .item-name{padding:.5 2.5em 0 1em}
+    /* .part-2 {border:5em solid yellow;} */
+    .part-2 img{margin:2em}
+    .part-2 .head-name{padding: .2em;position: relative;width: 108.3%;top: -1em;height: -2em;left: -2em;background: white;text-align: center;font-size: 2.5em;border: 0.4em solid pink;}
+    .part-2 .flex-container nav h1{font-size:1.8em;}
+    .cart{top: 10.5em;z-index: 200;}
+   
+</style>
+<body>
+    <section class="part-2 ">
+        <div class="flex-container" id="dark-chocolate part-0">
+            <nav><img src="./images/dark chocolare.jpg"></nav>
+            <nav>
+                <h1>DARK Chocolate</h1>
+                <h1>&#x20b9; 250</h1>
+                 <div>
+                    <button onclick="decrease()" style="background: white; border: 0;">-</button>
+                    <input type="text" step="1" min="1"max="5" value="1" class="value">
+                    <button onclick="increase()" style="background: white; border: 0;">+</button>
+                </div>
+                <p></p>
+                <button class="btn">ADD TO CART</button>
+            </nav>
+        </div>
+        <section class="flex-container" id="part-1">
+            <nav><img src="./images/milk chocolate.jpg"></nav>
+            <nav>
+                <h1>MILK CHOCOLATE</h1>
+                <h1>&#x20b9; 200</h1>
+                 <div>
+                    <button onclick="decrease()" style="background: white; border: 0;">-</button>
+                    <input type="text" step="1" min="1"max="5" value="1" class="value">
+                    <button onclick="increase()" style="background: white; border: 0;">+</button>
+                </div>
+                <p></p>
+                <button class="btn">ADD TO CART</button>
+            </nav>
+        </section>
+        <section class="flex-container"id="part-2">
+            <nav><img src="./images/dry fruit chocolate.jpg"></nav>
+            <nav>
+                <h1>DRY FRUIT CHOCOLATE</h1>
+                <h1>&#x20b9; 300</h1>
+                 <div>
+                    <button onclick="decrease()" style="background: white; border: 0;">-</button>
+                    <input type="text" step="1" min="1"max="5" value="1" class="value">
+                    <button onclick="increase()" style="background: white; border: 0;">+</button>
+                </div>
+                <p></p>
+                <button class="btn">ADD TO CART</button>
+            </nav>
+        </section>
+        <div class="flex-container"id="part-3">
+            <nav><img src="./images/chocolate cupcake.jpg"></nav>
+            <nav>
+                <h1>CHOCOLATE cupcake</h1>
+                <h1>&#x20b9; 150</h1>
+                 <div>
+                    <button onclick="decrease()" style="background: white; border: 0;">-</button>
+                    <input type="text" step="1" min="1"max="5" value="1" class="value">
+                    <button onclick="increase()" style="background: white; border: 0;">+</button>
+                </div>
+                <p></p>
+                <button class="btn">ADD TO CART</button>
+            </nav>
+        </div>
+        <div class="flex-container"id="part-4">
+            <nav><img src="./images/stawberry cupcake.jpg"></nav>
+            <nav>
+                <h1>STRAWBERRY CUPCAKE</h1>
+                <h1> &#x20b9;100</h1>
+                <p></p>
+                <button class="btn">ADD TO CART</button>
+            </nav>
+        </div>
+        <div class="flex-container"id="part-5">
+            <nav><img src="./images/cherry cupcake.jpg"></nav>
+            <nav>
+                <h1>CHERRY CUPCAKE</h1>
+                <h1>&#x20b9; 150</h1>
+                 <div>
+                    <button onclick="decrease()" style="background: white; border: 0;">-</button>
+                    <input type="text" step="1" min="1"max="5" value="1" class="value">
+                    <button onclick="increase()" style="background: white; border: 0;">+</button>
+                </div>
+                <p></p>
+                <button class="btn">ADD TO CART</button>
+            </nav>
+        </div>
+        <div class="flex-container"id="part-6">
+            <nav><img src="./images/chocolate cookie.jpg"></nav>
+            <nav>
+                <h1>CHOCOLATE COOKIE</h1>
+                <h1>&#x20b9;300</h1>
+                <div>
+                    <button onclick="decrease()" style="background: white; border: 0;">-</button>
+                    <input type="text" step="1" min="1"max="5" value="1" class="value">
+                    <button onclick="increase()" style="background: white; border: 0;">+</button>
+                </div>              
+                <p></p>
+                <button class="btn">ADD TO CART</button>
+            </nav>
+        </div>
+        <div class="flex-container"id="part-7">
+            <nav><img src="./images/pista cookies.jpg"></nav>
+            <nav>
+                <h1>PISTA COOKIE</h1>
+                <h1>&#x20b9;350</h1>
+                <div>
+                    <button onclick="decrease()" style="background: white; border: 0;">-</button>
+                    <input type="text" step="1" min="1"max="5" value="1" class="value">
+                    <button onclick="increase()" style="background: white; border: 0;">+</button>
+                </div>              
+                <p></p>
+                <button class="btn">ADD TO CART</button>
+            </nav>
+        </div>
+        <div class="flex-container"id="part-8">
+            <nav><img src="./images/fruit an nut cookies.jpg"></nav>
+            <nav>
+                <h1>FRUIT & NUT COOKIE</h1>
+                <h1>&#x20b9;300</h1>
+                <div>
+                    <button onclick="decrease()" style="background: white; border: 0;">-</button>
+                    <input type="text" step="1" min="1"max="5" value="1" class="value">
+                    <button onclick="increase()" style="background: white; border: 0;">+</button>
+                </div>              
+                <p></p>
+                <button class="btn">ADD TO CART</button>
+            </nav>
+        </div>
+    </section>
+</body>
+<script>
+        let initialValue= document.querySelector('.value')
+ function decrease(){
+     if(initialValue.value>0){initialValue.value--}
+     else{initialValue.innerHTML="0"}
+    }
+    function increase(){
+     if(initialValue.value<5){initialValue.value++}
+     else{initialValue.innerHTML="5"}
+    }
+    $('.toggle-cart').click(()=>{
+        $('.cart').toggleClass('visible')
+    })
+
+    $(window).scroll(function(){
+        if($(window).scrollTop()>=$('.part-2').offset().top-100){$('.cart').removeClass('visible')} 
+        if($(window).scrollTop()>=$('.head-name--chocolate').offset().top-100){$('.head-name--chocolate').css('position','fixed')
+            }else if($(window).scrollTop()<=$('#dark-chocolate')){console.log('hello');$('.head-name--chocolate').css('position','relative')}
+        if($(window).scrollTop()>=$('.head-name--cupcake').offset().top-100){$('.head-name--cupcake').css('position','fixed')
+            }else if($(window).scrollTop()<=$('#dry-fruit-chocolate')){$('.head-name--cupcake').css('position','relative')}
+        if($(window).scrollTop()>=$('.head-name--cookie').offset().top-100){$('.head-name--cookie').css('position','fixed')} 
+            else if($(window).scrollTop()<=$('#cherry-cupcake')){$('.head-name--cookie').css('position','relative')}
+    })
+    
+</script>
+</html>

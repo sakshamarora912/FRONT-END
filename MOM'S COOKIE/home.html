@@ -1,0 +1,335 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="shared.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        .part-2{ height:auto;background:#f8dff7;padding:1.5em 3.5em}
+        .part-2 h1{font-size: 2em;margin: 1.3em .3em 2em .3em;}
+        .part-2 p{width:50%; font-size: 1.3em}
+        .part-3{height:50%;background:white;}
+        .part-4{padding:1em 10em;}
+        .part-4 h1{text-align: center}
+        .part-4 div h1{padding:1em}
+        nav{margin:1 4em;}
+        .part-4 .section-food{height: 23em;width:16em;z-index:10;}
+        .part-4 .chocolate-items{border: 8px solid yellow; border-radius: 18px;}
+        .part-4 .cupcake-item{border: 8px solid lightseagreen; border-radius: 18px;}
+        .part-4 .cookie-item{border: 8px solid #20b262; border-radius: 18px;}
+        button{height:2em};
+        .flex-container{display: flex;flex-direction: row; font-size: .5em;padding:1em 5em };
+        span{font-size: 1.2em};
+        img{height:18em;width: 16em;overflow: hidden;}
+        .item-name{padding:.5 2.5em 0 1em}
+        .imgzoom{transform: scale(1.1);transition: .5s ease;}
+        .addtocart{position: relative;top:-6em;left:15.2em;opacity: 0;border-radius: 100%;z-index:4;}
+        .move{left:12.8em;opacity: 1;transition: all .4s ease-in-out;}
+        .image-click{position: relative;top: -320px;padding: 8em 3em;height:4em;background: #fafafaaf;opacity: 0;z-index: 4;}
+        .image-click button{padding: 0em;position: relative;top: -10.5em;left:8em;font-size:1em;border:0;background:transparent;padding: 0em !important;}
+        /* .container{position: relative;top: -20em;height:2em;z-index: 100;} */
+        .fade-background {height:100vh;width:100vw;z-index:0;position: fixed;top: 0;}
+        .popup-content{position:fixed;top:25%;left:22%;height:66%;width:50%;background:black;opacity: 0;overflow: hidden;z-index: 0;border-radius: 1em;}
+        .close-popout{position: relative;height:1.8em;width:1.8em;padding: 5px;background: red;top:1.1em;left:50.5em;border:none;border-radius: 26px;cursor: pointer;}
+        .notFound{background:white;height:8%;width:100%;display:none;text-align: center;font-size:1.5em;font-weight: 500;}
+        .blur{filter: blur(5px);}
+        </style>
+</head>
+<body>
+    <section class="part-0">
+        <nav id="profile"><a>My Profile</a></nav>
+        <nav id="faq"><a>FAQs</a></nav>
+        <nav style="cursor: pointer;"class="contact">Contact</nav>
+        <address class="address">
+            <a href="tel: 9953963660">call</a>
+            <a href="mailto: its.saksham912@gmail.com">email</a>
+       </address>
+        <nav id="work"><a>Work with me</a></nav>
+        <nav style="display:flex;justify-content: flex-end;width:73%;">
+            <span style="font-size: 1.4em; color: #ff5db6; margin-right: 1.5em ;">Get Social</span>
+            <a href="#"style="width:3.5em"><img src="./images/insta.png" style="height: 25;"></a>
+            <a href="#"style="width:3.5em"><img src="./images/telegram.png" style="height: 25;"></a>
+            <a href="#"style="width:3.5em"><img src="./images/discord.jpg" style="height: 25;"></a>
+        </nav>
+    </section>
+    <section class="fade-background"> 
+        <div class="popup-content">
+            <button class="close-popout">X</button>
+            <iframe scrolling="no" name="iframe_link" style="height: 113%;width: 104%;opacity: 1;margin-top: -4.5em;margin-left: -1.5em;"></iframe>
+        </div>
+    </section>
+    <section class="part-1">
+        <nav style="padding-right: 3em;padding-top: .5em; color:#079c70;">MOM'S <span style="font-size:3em;color: #f8078b;">Cookie</span></nav> 
+        <div style="display: flex; flex-direction: column;align-items: flex-end">
+            <div class="search-box">
+                <input type="text" placeholder="Seach Here...." class="search-input">
+                <button class="search-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                </button>
+            </div>
+            <div style="display: flex; flex-direction: row;justify-content: flex-end;width:67%"></button><div style="display: flex; flex-direction: row;justify-content: flex-end;width:67%;margin-top: 0.2em">
+            <nav><a href="#" style="font-weight: 700;color: white;background-color: #ff5db6;padding:10px;border-radius: 10px;">Home</a></nav>
+            <nav style="color:#ff5db6;margin-left: 2.5em;"><a href="about.html">About</a></nav>
+            <nav style="color:#ff5db6;margin-left: 1.5em;"><a href="store.html">Store</a></nav>
+            <nav class="cart"><h1>Cart items</h1></nav>
+            <button type="button" class="toggle-cart btn">cart</button>
+        </div>
+        </div>
+    </section>
+    <div class="notFound"></div>
+    <section class="part-2" id="home">
+        <h1>Welcome to <span style="font-size:1.5em;color: #cc47a4;"> MOM'S COOKIE</span></h1>
+        <p><strong>MINIMUM ORDER:</strong>2 Dozen of cookies</p>
+        <p><strong>NUT ALLERGIES:</strong>Please be advised that our shop uses a variety of nuts and peanut butter in the production of our some of our cookies.</p>
+        <h2>Great News! Tins are back in stock!</h2>
+        <p><strong>DRESS UP YOUR GIFT!</strong>Sending cookies in our specially designed is a great way to do just that! It’s round, it’s smart, it’s well-designed and it’s sturdy. Our sweets are a great way to add a little something extra to your gift and when they’re empty make a wonderful keepsake! Rs.500 each</p>
+    </section>
+    <section class="part-4" id="store">
+        <h1 style="font-size: 3em;">SWEETS & COOKIES</h1>
+        <div style="text-align: center;z-index: 10000;">
+           <a href="#chocolate"><img src="./images/chocolate svg.png" style="height:6em;cursor: pointer;"></a>
+            <a href="#cupcakes"><img src="./images/cupcake svg.jpg"style="height:6em;cursor: pointer;"></a>
+            <a href="#cookies"><img src="./images/cookie svg.png" style="height:6em;cursor: pointer;"></a>
+        </div>
+        <div>
+            <h1 id="chocolates">Chocolate</h1>
+            <div style="display:flex;flex-direction:row;">
+            <nav class="section-food chocolate-items">
+                <a href="store.html#part-0"><div style="overflow: hidden;"><img class="food-item" style="height:20em;width:16em;"src="./images/dark chocolare.jpg" alt=""><br></div></a>
+                <!-- <div class="image-click">
+                     <input type="radio"><label>Without tin &#x20b9; 250</label><br><br>
+                     <input type="radio"><label>Without tin &#x20b9; 300</label><br>
+                <button>X close</button>
+                </div> -->
+                <div style="padding:1em 0" class="container">
+                <span class="item-name">Dark chocolate</span>
+                <span class="item-price">250/500gm</span>
+                </div>
+                 <a href="inside.html#part-0" target="iframe_link"><img class="addtocart"src="./images/addtocardicon.png" height="40px" width="40px"></a>
+            </nav>
+            <nav class="section-food chocolate-items">
+                <div style="overflow: hidden;"><a href="store.html#part-1"><img class="food-item" style="height:20em;width:16em;"src="./images/milk chocolate.jpg" alt=""></a><br></div>
+                <!-- <div class="image-click">
+                    <input type="radio"><label>Without tin &#x20b9; 250</label><br><br>
+                    <input type="radio"><label>Without tin &#x20b9; 300</label><br>
+                <button>X close</button>
+                </div> -->
+                <div style="padding:1em 0"class="container">
+                <span class="item-name">Milk chocolate</span>
+                <span class="item-price">200/500gm</span>
+                </div>
+                 <a href="inside.html#part-1" target="iframe_link"><img class="addtocart"src="./images/addtocardicon.png" height="40px" width="40px"></a>
+            </nav>
+            <nav class="section-food chocolate-items">
+                <div style="overflow: hidden;"><a href="store.html#part-2"><img class="food-item" style="height:20em;width:16em;"src="./images/dry fruit chocolate.jpg" alt=""></a><br></div>
+                <!-- <div class="image-click">
+                    <input type="radio"><label>Without tin &#x20b9; 250</label><br><br>
+                    <input type="radio"><label>Without tin &#x20b9; 300</label><br>
+                <button>X close</button>
+                </div> -->
+                <div style="padding:1em 0"class="container">
+                <span class="item-name" style="padding: .1 2em 0 1em;">Dry fruit chocolate</span>
+                <span class="item-price">300/500gm</span>
+                </div>
+                 <a href="inside.html#part-2" target="iframe_link"><img class="addtocart"src="./images/addtocardicon.png" height="40px" width="40px"></a>
+            </nav>
+            </div>
+            <h1 id="cupcakes">cupcake</h1>
+            <div style="display:flex;flex-direction:row">
+            <nav class="section-food cupcake-item">
+                <div style="overflow: hidden;"><a href="store.html#part-3"><img class="food-item" style="height:20em;width:16em;"src="./images/chocolate cupcake.jpg" alt=""></a><br></div>
+                <!-- <div class="image-click">
+                    <input type="radio"><label>Without tin &#x20b9; 250</label><br><br>
+                    <input type="radio"><label>Without tin &#x20b9; 300</label><br>
+                <button>X close</button>
+                </div> -->
+                <div style="padding:1em 0"class="container">
+                <span class="item-name">chocolate cupcake</span>
+                <span class="item-price">150/500gm</span>
+                </div>
+                 <a href="inside.html#part-3" target="iframe_link"><img class="addtocart"src="./images/addtocardicon.png" height="40px" width="40px"></a>
+            </nav>
+            <nav class="section-food cupcake-item">
+                <div style="overflow: hidden;"><a href="store.html#part-4"><img class="food-item" style="height:20em;width:16em;"src="./images/stawberry cupcake.jpg" ></a><br></div>
+                <!-- <div class="image-click">
+                    <input type="radio"><label>Without tin &#x20b9; 250</label><br><br>
+                    <input type="radio"><label>Without tin &#x20b9; 300</label><br>
+                <button>X close</button>
+                </div> -->
+                <div style="padding:1em 0"class="container">
+                <span class="item-name" style="padding: .1 1.5em 0 1em;"> strawberry cupcake</span>
+                <span class="item-price">100/500gm</span>
+                </div>
+                 <a href="inside.html#part-4" target="iframe_link"><img class="addtocart"src="./images/addtocardicon.png" height="40px" width="40px"></a>
+            </nav>
+            <nav class="section-food cupcake-item">
+                <div style="overflow: hidden;"><a href="store.html#part-5"><img class="food-item" style="height:20em;width:16em;"src="./images/cherry cupcake.jpg" alt=""></a><br></div>
+                <!-- <div class="image-click">
+                    <input type="radio"><label>Without tin &#x20b9; 250</label><br><br>
+                    <input type="radio"><label>Without tin &#x20b9; 300</label><br>
+                <button>X close</button>
+                </div> -->
+                <div style="padding:1em 0"class="container">
+                <span class="item-name">cherry cupcake</span>
+                <span class="item-price">150/500gm</span>
+                </div>
+                 <a href="inside.html#part-5" target="iframe_link"><img class="addtocart"src="./images/addtocardicon.png" height="40px" width="40px"></a>
+            </nav>
+            </div>
+            <h1 id="cookies">cookies</h1>
+            <div style="display:flex;flex-direction:row">
+            <nav class="section-food cookie-item">
+                <div style="overflow: hidden;"><a href="store.html#part-6"><img class="food-item" style="height:20em;width:16em;"src="./images/chocolate cookie.jpg"></a><br></div>
+                <!-- <div class="image-click">
+                    <input type="radio"><label>Without tin &#x20b9; 250</label><br><br>
+                    <input type="radio"><label>Without tin &#x20b9; 300</label><br>
+                <button>X close</button>
+                </div> -->
+                <div style="padding:1em 0"class="container">
+                <span class="item-name">chocolate cookies</span>
+                <span class="item-price">300/500gm</span>
+                </div>
+                 <a href="inside.html#part-6" target="iframe_link"><img class="addtocart"src="./images/addtocardicon.png" height="40px" width="40px"></a>
+            </nav>
+            <nav class="section-food cookie-item">
+                <div style="overflow: hidden;"><a href="store.html#part-7"><img class="food-item" style="height:20em;width:16em;"src="./images/pista cookies.jpg" alt=""></a><br></div>
+                <!-- <div class="image-click">
+                    <input type="radio"><label>Without tin &#x20b9; 250</label><br><br>
+                    <input type="radio"><label>Without tin &#x20b9; 300</label><br>
+                <button>X close</button>
+                </div> -->
+                <div style="padding:1em 0"class="container">
+                <span class="item-name">pista cookies</span>
+                <span class="item-price">350/500gm</span></div>                
+                <a href="inside.html#part-7" target="iframe_link"><img class="addtocart"src="./images/addtocardicon.png" height="40px" width="40px"></a>
+            </nav>
+            <nav class="section-food cookie-item">
+                <div style="overflow: hidden;"><a href="store.html#part-8"><img class="food-item" style="height:20em;width:16em;"src="./images/fruit an nut cookies.jpg" alt=""></a><br></div>
+                <!-- <div class="image-click">
+                    <input type="radio" id="without"><label for="without">Without tin &#x20b9; 250</label><br><br>
+                    <input type="radio" id="with"><label for="with">Without tin &#x20b9; 300</label><br>
+                <button>X close</button>
+                </div> -->
+                <div style="padding:1em 0"class="container">
+                <span class="item-name"style="padding: .5 1.6em 0 1em;">Fruit & Nut cookies</span>
+                <span class="item-price" >300/500gm</span>
+                </div>
+                <a href="inside.html#part-8" target="iframe_link"><img class="addtocart"src="./images/addtocardicon.png" height="40px" width="40px"></a>
+            </nav>
+            </div>
+        </div>
+    </section>
+   
+</body>
+<script>
+     $('.toggle-cart').click(()=>{
+        $('.cart').toggleClass('visible')
+    })
+
+    $('.section-food').hover(function(){
+    $(this).find(".food-item").toggleClass('imgzoom');
+    $(this).find('.addtocart').toggleClass('move');
+    console.log('hello')
+    })
+
+    $('.addtocart').click(function(){
+        // console.log($(this).closest('.section-food').find('.food-item').attr('src')); 
+        // console.log($(this).attr('src')); 
+        $('.fade-background').css({'filter':'blur(0px)','z-index':'200'})
+        $('.popup-content').css({'z-index':'300','opacity':'1'})
+        $('.part-1').addClass('blur')
+        $('.part-2').addClass('blur')
+        $('.part-3').addClass('blur')
+        $('.part-4').addClass('blur')
+        $('.addtocart').css('z-index','0')
+    })
+$('.image-click button').click(function(){$(this).closest('.section-food').find('.image-click').css('opacity','0')})
+
+    $(window).scroll(function(){
+         if($(window).scrollTop()>=$('.part-0').offset().top+70){
+             $('.part-1').css({'position':'fixed','top':'0','padding':'.5em 1em','box-shadow':'1em 1px 0.2em pink;'})
+             $('.part-1').children('nav').css({'font-size':'.7em','width':'36em','display':'fixed'})
+             $('.part-1').children('div').css('flex-direction','row')
+             $('.part-1').children('div').children('div').children('nav').css('font-size','.8em')
+             $('.part-2').css('margin-top','6.8em')
+             $('.btn').css('width','3em')
+             $('.notFound').css('margin-top','2em')
+             $('.cart').css({'right':'-0.5em','top':'4.8em'})
+         }else{
+            $('.part-1').css({'position':'relative','top':'0','padding':'.5em 1em','box-shadow':'1em 1px 0.2em pink;'})
+             $('.part-1').children('nav').css({'font-size':'1em','width':'1em','display':'relative'})
+             $('.part-1').children('div').css('flex-direction','column')
+             $('.part-1').children('div').children('div').children('nav').css('font-size','1em')
+             $('.part-2').css('margin-top','0em')
+             $('.btn').css('width','11em')
+             $('.notFound').css('margin-top','0em')
+             $('.cart').css({'right':'-1.5em','top':'7.5em'})
+         }
+     })
+    //  $(window).scroll(function(){
+    //      $('.cart').css('opacity','0')
+    //  })
+     
+$('.contact').hover(function(){$('.address').css('display','block')})
+
+$('.contact').mouseleave(function(){
+    setTimeout(function() {$('.address').css('display','none')},2000)
+})
+
+
+$('.close-popout').click(function(){
+        $('.fade-background').css({'z-index':'0'})
+        $('.popup-content').css({'z-index':'0','opacity':'0'})
+        $('.addtocart').css('z-index','4')  
+        $('.part-1').removeClass('blur')
+        $('.part-2').removeClass('blur')
+        $('.part-3').removeClass('blur')
+        $('.part-4').removeClass('blur')
+
+    })
+
+// function myFunction() {
+//     let input = document.getElementById("myInput");
+//     let searchFor=document.querySelectorAll('.item-name')
+//     let searchFor_2=document.querySelectorAll('.part-4 div h1')
+//     let notfound=document.querySelector('.notFound')
+//     let food = document.querySelectorAll('.section-food')
+//     console.log(input.innerHTML)
+//     for (let i = 0; i <searchFor.length; i++){
+//         if (searchFor[i].innerText.toUpperCase().indexOf(input.value.toUpperCase())>-1){searchFor[i].style.color="red"} 
+//         else {searchFor[i].style.color="black";notfound.style.display='block'; notfound.innerText="Search for" + " " + input.value + " " + "not found !!" ;}
+//     }
+
+//     for (let i = 0; i <searchFor_2.length; i++){
+//         if (searchFor_2[i].innerText.toUpperCase().indexOf(input.value.toUpperCase())>-1){searchFor_2[i].style.color="red";} 
+//         else {searchFor[i].style.color="black";notfound.style.display='block'; notfound.innerText="Search for" + " " + input.value + " " + "not found !!" ;}
+//     }
+// }
+    
+function myFunction(){
+   $(".item-name").each(function(){
+        if ($(this).text().toUpperCase().indexOf($('#myInput').val().toUpperCase())>-1){
+           $(this).css('color','red');
+        }else{
+            $(this).css('color','black');
+            $('.notFound').text("Search for" + " " + $('#myInput').value + " " + "not found !!");
+        }
+    });
+    $('.part-4 div h1').each(function(){
+        if ($(this).text().toUpperCase().indexOf($('#myInput').val().toUpperCase())>-1){
+           $(this).css('color','red');
+           $('body').animate({scrollTop: $(this).offset().top }, 500);
+        }else{
+            $(this).css('color','black');
+            $('.notFound').text("Search for" + " " + $('#myInput').value + " " + "not found !!");
+        }
+    });
+}
+   
+</script>
+</html>

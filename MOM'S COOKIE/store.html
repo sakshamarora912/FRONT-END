@@ -1,0 +1,238 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="shared.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="common.css">
+</head>
+<style>
+    .flex-container{display: flex;border-bottom: 5.8em solid yellow;}
+    .flex-container img{width:24em;height: 30em;}
+    .flex-container input{width:2em;font-size: 1.2em;font-weight: 300;}
+    .btn{font-size: 1.3em;font-weight:500;border:1px solid #ee062d; background:white;color:#ee062d;border-radius: 10px;margin:.5em;}
+    .item-name{padding:.5 2.5em 0 1em}
+    .part-2 {border:5em solid yellow;}
+    .part-2 img{margin: 1em 5em 1em 7em}
+    .head-name{padding: .2em;position: relative;width: 108.3%;top: -1em;height: -2em;left: -2em;background: white;text-align: center;font-size: 2.5em;border: 0.4em solid pink;}
+    .part-2 .flex-container nav h1{font-size: 2em;}
+    .cart{top: 10.5em;z-index: 200;}
+    .head-name-chocolate--sticky,.head-name-cupcake--sticky,.head-name-cookie--sticky{position:fixed;top:-2.3em;opacity: 0;margin: 2.25em;width: 95.6%;}
+</style>
+<body style="background:white">
+    <h1 class="head-name head-name-chocolate--sticky"> Chocolate</h1>
+    <h1 class="head-name head-name-cupcake--sticky"> Cupcake</h1>
+    <h1 class="head-name head-name-cookie--sticky"> Cookie</h1>
+    <section class="part-0">
+        <nav id="profile"><a>My Profile</a></nav>
+        <nav id="faq"><a>FAQs</a></nav>
+        <nav style="cursor: pointer;"class="contact">Contact</nav>
+        <address class="address">
+            <a href="tel: 9953963660">call</a>
+            <a href="mailto: its.saksham912@gmail.com">email</a>
+       </address>
+        <nav id="work"><a>Work with me</a></nav>
+        <nav style="display:flex;justify-content: flex-end;width:73%;">
+            <span style="font-size: 1.4em; color: #ff5db6; margin-right: 1.5em ;">Get Social</span>
+            <a href="#"style="width:3.5em"><img src="./images/insta.png" style="height: 25;"></a>
+            <a href="#"style="width:3.5em"><img src="./images/telegram.png" style="height: 25;"></a>
+            <a href="#"style="width:3.5em"><img src="./images/discord.jpg" style="height: 25;"></a>
+        </nav>
+    </section>
+    <section class="part-1">
+        <nav style="padding-right: 3em;padding-top: .5em; color:#079c70;">MOM'S <span style="font-size:3em;color: #f8078b;">Cookie</span></nav> 
+        <div style="display: flex; flex-direction: column;align-items: flex-end">
+            <div class="search-box">
+                <input type="text" placeholder="Seach Here...." class="search-input">
+                <button class="search-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                </button>
+            </div>
+            <div style="display: flex; flex-direction: row;justify-content: flex-end;width:67%"></button><div style="display: flex; flex-direction: row;justify-content: flex-end;width:67%;margin-top: 0.2em">
+            <nav><a href="#" style="font-weight: 700;color: white;background-color: #ff5db6;padding:10px;border-radius: 10px;">Home</a></nav>
+            <nav style="color:#ff5db6;margin-left: 2.5em;"><a href="about.html">About</a></nav>
+            <nav style="color:#ff5db6;margin-left: 1.5em;"><a href="store.html">Store</a></nav>
+            <nav class="cart"><h1>Cart items</h1></nav>
+            <button type="button" class="toggle-cart btn">cart</button>
+        </div>
+        </div>
+    </section>
+    <section class="part-2 ">
+       <h1 class="head-name head-name--chocolate"> Chocolate</h1>
+        <div class="flex-container chocolate-1" id="part-0">
+            
+            <nav><img src="./images/dark chocolare.jpg"></nav>
+            <nav>
+                <h1>DARK Chocolate</h1>
+                <h1>&#x20b9; 250</h1>
+                 <div>
+                    <button onclick="decrease()" style="background: white; border: 0;">-</button>
+                    <input type="text" step="1" min="1"max="5" value="1" class="value">
+                    <button onclick="increase()" style="background: white; border: 0;">+</button>
+                </div>
+                <p></p>
+                <button class="btn">ADD TO CART</button>
+            </nav>
+        </div>
+        <div class="flex-container chocolate-2" id="part-1">
+            <nav><img src="./images/milk chocolate.jpg"></nav>
+            <nav>
+                <h1>MILK CHOCOLATE</h1>
+                <h1>&#x20b9; 200</h1>
+                 <div>
+                    <button onclick="decrease()" style="background: white; border: 0;">-</button>
+                    <input type="text" step="1" min="1"max="5" value="1" class="value">
+                    <button onclick="increase()" style="background: white; border: 0;">+</button>
+                </div>
+                <p></p>
+                <button class="btn">ADD TO CART</button>
+            </nav>
+        </div>
+        <div class="flex-container chocolate-3"id="part-2">
+            <nav><img src="./images/dry fruit chocolate.jpg"></nav>
+            <nav>
+                <h1>DRY FRUIT CHOCOLATE</h1>
+                <h1>&#x20b9; 300</h1>
+                 <div>
+                    <button onclick="decrease()" style="background: white; border: 0;">-</button>
+                    <input type="text" step="1" min="1"max="5" value="1" class="value">
+                    <button onclick="increase()" style="background: white; border: 0;">+</button>
+                </div>
+                <p></p>
+                <button class="btn">ADD TO CART</button>
+            </nav>
+        </div>
+       <h1 class="head-name head-name--cupcake">Cupcake</h1>
+        <div class="flex-container cupcake-1"id="part-3">
+            <nav><img src="./images/chocolate cupcake.jpg"></nav>
+            <nav>
+                <h1>CHOCOLATE cupcake</h1>
+                <h1>&#x20b9; 150</h1>
+                 <div>
+                    <button onclick="decrease()" style="background: white; border: 0;">-</button>
+                    <input type="text" step="1" min="1"max="5" value="1" class="value">
+                    <button onclick="increase()" style="background: white; border: 0;">+</button>
+                </div>
+                <p></p>
+                <button class="btn">ADD TO CART</button>
+            </nav>
+        </div>
+        <div class="flex-container cupcake-2"id="part-4">
+            <nav><img src="./images/stawberry cupcake.jpg"></nav>
+            <nav>
+                <h1>STRAWBERRY CUPCAKE</h1>
+                <h1> &#x20b9;100</h1>
+                <p></p>
+                <button class="btn">ADD TO CART</button>
+            </nav>
+        </div>
+        <div class="flex-container cupcake-3"id="part-5">
+            <nav><img src="./images/cherry cupcake.jpg"></nav>
+            <nav>
+                <h1>CHERRY CUPCAKE</h1>
+                <h1>&#x20b9; 150</h1>
+                 <div>
+                    <button onclick="decrease()" style="background: white; border: 0;">-</button>
+                    <input type="text" step="1" min="1"max="5" value="1" class="value">
+                    <button onclick="increase()" style="background: white; border: 0;">+</button>
+                </div>
+                <p></p>
+                <button class="btn">ADD TO CART</button>
+            </nav>
+        </div>
+       <h1 class="head-name head-name--cookie">Cookie</h1>
+        <div class="flex-container cookie-1"id="part-6">
+            <nav><img src="./images/chocolate cookie.jpg"></nav>
+            <nav>
+                <h1>CHOCOLATE COOKIE</h1>
+                <h1>&#x20b9;300</h1>
+                <div>
+                    <button onclick="decrease()" style="background: white; border: 0;">-</button>
+                    <input type="text" step="1" min="1"max="5" value="1" class="value">
+                    <button onclick="increase()" style="background: white; border: 0;">+</button>
+                </div>              
+                <p></p>
+                <button class="btn">ADD TO CART</button>
+            </nav>
+        </div>
+        <div class="flex-container cookie-2"id="part-7">
+            <nav><img src="./images/pista cookies.jpg"></nav>
+            <nav>
+                <h1>PISTA COOKIE</h1>
+                <h1>&#x20b9;350</h1>
+                <div>
+                    <button onclick="decrease()" style="background: white; border: 0;">-</button>
+                    <input type="text" step="1" min="1"max="5" value="1" class="value">
+                    <button onclick="increase()" style="background: white; border: 0;">+</button>
+                </div>              
+                <p></p>
+                <button class="btn">ADD TO CART</button>
+            </nav>
+        </div>
+        <div class="flex-container cookie-3"id="part-8">
+            <nav><img src="./images/fruit an nut cookies.jpg"></nav>
+            <nav>
+                <h1>FRUIT & NUT COOKIE</h1>
+                <h1>&#x20b9;300</h1>
+                <div>
+                    <button onclick="decrease()" style="background: white; border: 0;">-</button>
+                    <input type="text" step="1" min="1"max="5" value="1" class="value">
+                    <button onclick="increase()" style="background: white; border: 0;">+</button>
+                </div>              
+                <p></p>
+                <button class="btn">ADD TO CART</button>
+            </nav>
+        </div>
+    </section>
+</body>
+<script>
+        let initialValue= document.querySelector('.value')
+ function decrease(){
+     if(initialValue.value>0){initialValue.value--}
+     else{initialValue.innerHTML="0"}
+    }
+    function increase(){
+     if(initialValue.value<5){initialValue.value++}
+     else{initialValue.innerHTML="5"}
+    }
+    $('.toggle-cart').click(()=>{
+        $('.cart').toggleClass('visible')
+    })
+
+    $(window).scroll(function(){
+        if($(window).scrollTop()>=$('.part-2').offset().top-100){$('.cart').removeClass('visible')} 
+        if($(window).scrollTop()>=$('.head-name--chocolate').offset().top){$('.head-name-chocolate--sticky').css('opacity','1');$('.head-name--chocolate').css('opacity','0')}else{$('.head-name-chocolate--sticky').css('opacity','0');$('.head-name--chocolate').css('opacity','1')}
+        if($(window).scrollTop()>=$('.chocolate-3').offset().top+100){$('.head-name-chocolate--sticky').css('opacity','0')}
+        if($(window).scrollTop()>=$('.head-name--cupcake').offset().top){$('.head-name-cupcake--sticky').css('opacity','1');$('.head-name--cupcake').css('opacity','0')}else {$('.head-name-cupcake--sticky').css('opacity','0');$('.head-name--cupcake').css('opacity','1')}
+        if($(window).scrollTop()>=$('.cupcake-3').offset().top+20){$('.head-name-cupcake--sticky').css('opacity','0')}
+        if($(window).scrollTop()>=$('.head-name--cookie').offset().top){$('.head-name-cookie--sticky').css('opacity','1');$('.head-name--cookie').css('opacity','0')} else {$('.head-name-cookie--sticky').css('opacity','0');$('.head-name--cookie').css('opacity','1')}
+        if($(window).scrollTop()>=$('.cookie-3').offset().top+20){$('.head-name-cookie--sticky').css('opacity','0')}
+    })
+
+    $('.btn').click(function(){
+        console.log( $(this) );  
+    })
+
+//     function myFunction() {
+//     let input = document.getElementById("myInput");
+//     let searchFor=document.querySelectorAll('.item-name')
+//     let searchFor_2=document.querySelectorAll('.part-4 div h1')
+//     let notfound=document.querySelector('.notFound')
+//     console.log(input.innerHTML)
+//     for (let i = 0; i <searchFor.length; i++){
+//         if (searchFor[i].innerText.toUpperCase().indexOf(input.value.toUpperCase())>-1){searchFor[i].style.color="red";} 
+//         else { notfound.style.display='block'; notfound.innerText="Search for" + " " + input.value + " " + "not found !!" ;}
+//     }
+//     for (let i = 0; i <searchFor_2.length; i++){
+//         if (searchFor_2[i].innerText.toUpperCase().indexOf(input.value.toUpperCase())>-1){searchFor_2[i].style.color="red";} 
+//         else {notfound.style.display='block'; notfound.innerText="Search for" + " " + input.value + " " + "not found !!" ;}
+//     }
+// }
+   
+    
+</script>
+</html>
