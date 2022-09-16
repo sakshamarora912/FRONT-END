@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact-us</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="contact-us.css">
+</head>
+<style>
+    .main-section{height:100%;background: url(./images/product-overview-background.png),linear-gradient(to top,#740000 2%,transparent 40%),linear-gradient(to bottom,#740000 2%,transparent 20%), black;color: white;padding:3em}
+h1{padding-top:1em;text-align:center;margin-top: 0;font-size:3em;font-weight:500 ;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+h3{text-align: center;font-family: Georgia, 'Times New Roman', Times, serif;}
+input{color: #999;background-color: #eee;width: 34em;height: 4em;}
+textarea{color: #999;background-color: #eee;margin-left: 16em;height: 14em;width: 70em;}
+.contact-us-button{margin-left: 32em;font-size: 2em;background: black;border: 2px solid red;color: red;margin: 1em 0 0 32em;}
+</style>
+<body style="margin:0">
+    <header class="main-header">
+        <div class="style"><a href="index.html"class=" main-header__style">BLOODY<span style="color: #8c0707;">HOST</span></a> </div>
+        <div style="justify-content: flex-end; width:100%;" >
+         <div class=" dropdown">
+             <button class=" tag dropbtn">Services</button>
+            <div class="dropdown-content">
+                <a href="shared-hosting.html">Shared Hosting </a>
+                <a href="vps-hosting.html">VPS Hosting</a>
+                <a href="cloud-hosting.html">Cloud Hosting</a>
+                <a href="dedicated.html">Dedicated Hosting </a>
+                <a href="reseller-hosting.html">Reseller hosting</a>
+            </div>
+          </div>
+          <a href="about-us.html"><button class="tag">About Us</button></a>
+          <button class="login"><a href="log-in.html">Log-In</a></button>
+          <a href="www.google.com"><img class="cart-image" src="./images/cart.png" height="40" width="40"></a>
+        </div>
+    </header>
+    <section class="main-section">
+    <h1>CONTACT US</h1>
+    <section> 
+        <h3>Do you have feedback or suggestion for us? Have you noticed a bug in the app? Or maybe you just want to say hi? 🙂<br>
+            Feel free to send us a message by using the form below, we will be happy to hear from you!</h3>          
+              <input style="margin:2em 0 2em 16em;" type="text" class="input" value="" placeholder="Name">
+            <input  type="text"  class="input" value="" placeholder="Email Address"><br>
+            <textarea placeholder="Message"></textarea>
+    </section>
+    <button class="contact-us-button">submit</button>
+</body>
+</html>

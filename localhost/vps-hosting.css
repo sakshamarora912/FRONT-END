@@ -1,0 +1,76 @@
+.part-1{background:url(./images/vps-hosting.svg)52em/32em,linear-gradient(to right,black 2%,transparent 80%),#7b0606; background-repeat: no-repeat; padding:2em 2em 2em 6em ;height:30rem} 
+.part-1 h2{width: 10em; color: white;font-weight: 900;font-size:4em;margin: 2.6em 0 .6em 0;}
+.part-1 h4{width: 17em;color:#949494;font-weight: 600;}
+.part-1 button{font-size: 1.4em; width:6.5em;border-radius:.4em;margin: 1.4em 2em;}
+.btn-secondary{border-radius:1em;margin: 1.4em 2em;font-size: 1.4em;}
+.section-title{color: #c71c1c;position: absolute; top:15.2em;left:18em; font-size: 2em;text-shadow:1px 1px 2px grey; text-align: center;padding:.6em 0;margin:0px;outline: blanchedalmond;}
+.part-2{display: flex;justify-content: center;background: radial-gradient(circle farthest-corner at 50% 50%,black 70%,#141414 30%,grey 50%); padding-top:3em}
+.part-2 button{border-radius: .4em;width:7em; font-size: 1.4em; margin:.4em}
+.basic, .advance, .pro{text-align: center;margin: 3rem 1rem; padding:1.4em 0;width: 22% ;height: 34.5em;text-align: center;vertical-align: middle;border-radius: 1em;}
+.basic{background: #d68787;margin-top: 4.4em;}
+.advance{background: #c71c1c;height:37em;border: 2px solid white;padding-top: 5px;}
+.pro{background: #d64545;margin-top:4.4em;}
+.basic h2, .advance h2, .pro h2{font-weight: 900;width:10.2em;position: absolute;height: 2em;top: 19em;padding: .3em;  background: #111111;text-shadow:1px 1px 2px #ffffff;}
+.basic h2{left:6.6em;color:#d68787;border: 3px solid #d68787;top:2.8em;left:-.2em;}
+.advance h2{left: 17.5em;top:20.9em;color:#c71c1c;border: 3px solid #c71c1c;}
+.pro h2{left: 28.4em;color:#d64545;border: 3px solid #d64545;top:2.8em;left:-.2em;}
+.basic li, .advance li, .pro li{list-style: none; text-align: center;width:12em;padding:.4em 0;border-top: 1px solid black;border-bottom:1px solid black;}
+.basic ul,.advance ul,.pro ul{padding-left: 3em;}
+.basic h5, .advance h5, .pro h5{font-size: 1em;font-weight: lighter;}
+.badge{font-size: 1.4em;left: 0;top: -1.3em;;background: white;color: black;outline: red;position: relative;}
+.part-3{ background:url(./images/part-3-image.png),black ; padding:0 5em;}
+.part-3 h1{color: #c71c1c;font-size: 2.4em;text-shadow:2px 1px 2px black; text-align: center;padding: .7em .6em;margin:0px;font-weight: 700;}
+.part-3 .parent{display: flex;}
+.part-3 .parent .child{flex-direction: column;background: black;margin: .4em;border-radius: 1em;    padding: .6em;width: 15em;height: 17em;}
+.part-3 .parent .child img{margin: 1em 5em; border-radius: 4em;width:5em}
+.part-3 .parent .child h4{font-size: 1.3em;font-weight: 700; text-align: center;}
+.part-3 .parent .child h5{color: white; text-align: center;    font-size: 1em;font-weight:lighter;}
+.part-4{background: black;}
+.part-4 h1{color: #c71c1c; font-size: 2em;text-shadow:1px 1px 2px grey; text-align: center;padding:.6em 0;margin:0px;}
+.part-4 .parent{display: flex;justify-content: center;}
+.part-4 .parent .child{flex-direction: column;width: 17em;height:15em;margin: .6em;border-radius: 4px;}
+.part-4 .parent .child h2{margin: .2em .7em;color: black;font-size: 1.5em;}
+.part-4 .parent .child ul{font-size:.9em;}
+.part-4 .parent .child hr{margin-top:0;margin-bottom: .5rem;}
+.part-4 .button{width:100%;display: flex;justify-content: center;}
+.btn-success{margin: 1em;border-radius: 4px;}
+.parent{display: flex; flex-wrap: wrap;}
+.change{box-shadow: 1px 1px 16px 5px white;border:2px solid white}
+
+@media only screen and (max-width: 400px) {
+    .part-1 h2{font-weight: 700;font-size: 1.2em;}
+    .part-1 h4 {width: 22em;font-size: .6em;font-weight: 600;margin: 1.5em 0 0.5em 0;}
+    .part-1 {padding: 1em 2em 2em 2em;height: 12rem;}
+    .part-1 button{border-radius: 0.5em;margin: 0.6em 0em;font-size: .8em;}
+    .part-2 {display: flex;flex-wrap: wrap;}
+    .part-2 .section-title{top: 11em;left:4em;font-size: 1.2em;}
+    .plan{width: 38%;height: 17.5em;margin: 2rem 1rem;padding: 1em 0;}
+    .plan h3{font-size: 1em;}   
+    .plan h5{font-size: .8em;}   
+    .plan h1 {font-size: 1.5rem;}
+    .plan h2{font-size: 1em;font-weight: 600;text-shadow: 1px 1px 1px #ffffff;}
+    .plan li{padding: 0.1em 0;}
+    .plan ul {padding-left: 1.5em;font-size: .6em;}
+    .plan button {width: 5em;font-size: .7em;margin: 0em;}
+    .basic,.pro{height: 19em;}
+    .basic{margin-top:3em;}
+    .basic h2{top:4.2em!important;width: 10em;left: -0.2em!important;}
+    .advance{height:22.5em;}
+    .advance h2 {left: 13.2em;top: 23em;}
+    .pro h2{top:4em}
+    .badge{top:-2.3em}
+
+    .part-3 { padding: 0 1em;}
+    .part-3 h1 {font-size: 1em;padding: 0.7em 0.6em;margin: 0px;font-weight: 700;}
+    .part-3 .parent .child {margin: 0.4em;padding: 0.4em;width: 6.5em;height: 9em;}
+    .part-3 .parent .child img {margin: 0em 2em;border-radius: 4em;width: 2em;  }
+    .part-3 .parent .child h4 {font-size: .7em;padding: 0.7em 0.6em;margin: 0px;font-weight: 700;   }
+    .part-3 .parent .child h5 {font-size: .6em;   margin-left: 0px;text-align: center;}
+    .part-3 .parent .child hr{margin: 0;}
+    .part-4 h1 {font-size: 1em;}
+    .part-4 .parent .child h2 {font-size: .8em; }
+    .part-4 .parent .child h1 {font-size: 1em;}
+    .part-4 .parent .child ul {font-size: .7em;padding-left: 2em;}
+    .part-4 .parent .child{width:10em;height: 10em;}
+    .btn-success {margin: 0.5em;font-size: .6em;}
+}

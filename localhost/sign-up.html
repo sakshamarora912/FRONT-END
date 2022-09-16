@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html= lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv = "X-UA-Compatible" content="ie=edge">
+        <title> Hosting </title>
+    <!-- <link rel="stylesheet" href="shared.css"> -->
+    <link rel="stylesheet" href="sign-up.css">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+    <style>
+        .dropdown-content a{color: grey;}
+        p{color: white;}
+        .hidden{visibility: hidden;display: none;}
+        /* .visibility{visibility: visible!important; display: inline;} */
+    </style>
+    </head>
+    <div class="backdrop"></div>
+    <body>
+        <header class="main-header">
+            <div class="style"><a href="index.html"class=" main-header__style">LOCAL<span style="color: #8c0707;">HOST</span></a> </div>
+            <div style="justify-content: flex-end; width:100%;" >
+             <div class=" dropdown">
+                 <button class=" tag dropbtn">Services</button>
+                <div class="dropdown-content" style="box-shadow: 0px 4px 8px 0px #7b7b7b;background: #0d0d0d26;">
+                    <a href="shared-hosting.html">Shared Hosting </a>
+                    <a href="vps-hosting.html">VPS Hosting</a>
+                    <a href="cloud-hosting.html">Cloud Hosting</a>
+                    <a href="dedicated.html">Dedicated Hosting </a>
+                    <a href="reseller-hosting.html">Reseller hosting</a>
+                </div>
+              </div>
+              <a href="about-us.html"><button class="tag">About Us</button></a>
+              <button class="login"><a href="log-in.html">Log-In</a></button>
+            </div>
+        </header>
+        <main>
+            <h1> Awesome!! Let start.</h1>
+            <form  method="POST" action="connect.php">
+            <label>First Name:</label><br>
+            <input class="validate" type="text"placeholder="Enter your First name" name="firstname"><br>
+            <p class="hidden">Please your first name!</p>
+            <label>Last Name:</label><br>
+            <input class="validate"  type="text"placeholder="Enter your  Last name" name="lastname"><br>
+            <p  class="hidden">Please your last name!</p>
+            <label>User Name:</label><br>
+            <input class="validate"  type="variant"placeholder="Enter your  User name" name="username"><br>
+            <p class="hidden">Please your username!</p>
+            <label>Email:</label><br>
+            <input class="validate"  type="email"placeholder="Enter your Email-id" name="email"><br>
+            <p class="hidden">Please your Email-id!</p>
+            <label>Password:</label><br>
+            <input class="validate"  type="password"placeholder="Enter your Password" name="password"><br><br>
+            <p class="hidden">Please your first Password!</p>
+            <input class="checkbox" type="checkbox"> 
+            <p class="hidden">click to validate!</p>
+            <label for="agree-terms"> Agree to <a href="#">Terms &amp; conditions</a> </label>
+            <div style="text-align:center"><br>
+            <button id="signin"> <a href="log-in.html"> Sign In</a></button>
+            <button id ="signup" type="submit" style="display:inline" onsubmit="formvalidate()"> Sign Up</button><br>
+            <ul >
+                <li><a style="color: white;" href="policy-service.html">Privacy Policy</a></li>
+                <li><a style="color: white;" href="terms-of-service.html"> Terms of service</a></li>
+            </ul>
+            <ul style="flex-direction: row;">
+                <li><a style="color: white;" href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </form>
+        </main>
+        <footer class="main-footer" style="background-color: black;color: white;">
+            </div >
+           </footer>
+        </body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+            function formvalidate(){
+                 $('.validate').each(function(){
+                            if(!$(this).val()){
+                            $(this).next('p').removeClass('hidden');
+                            }
+                          });}
+       </script>;
+</html>

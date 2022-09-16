@@ -1,0 +1,254 @@
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>shared-hosting</title>
+     <link rel = "stylesheet" href = "main.css">
+    <link rel = "stylesheet" href = "shared.css">
+    <link rel="stylesheet" href="shared-hosting.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ </head>
+ <script>
+    window.onscroll=function(){
+    let header=document.querySelector('.main-header');
+    let part_2=document.querySelector('.part-2')
+    let sliderImages = document.querySelectorAll('.slide-in');
+    if(window.scrollY>=part_2.offsetTop-80){header.classList.add('opacity');}
+    else{header.classList.remove('opacity');}
+    sliderImages.forEach(sliderImage => {
+    if (window.scrollY>=part_2.offsetTop-300) {sliderImage.classList.add('add');}
+    else {sliderImage.classList.remove('add');}
+     });}
+</script>
+ <body>
+    <div class="backdrop"></div>
+        <div class="dialog-box">
+            <p class = "cross">x</p>
+            <h1 class="dialog-box_title">Do you want to continue?</h1>  
+            <div class="dialog-box_action">
+                 <!-- <a href="sign-up.html" class="dialog-box__action">YES!</a> -->
+                 <a href="selectdomain.html" class="dialog-box__action">YES!</a>
+                <button class="dialog-box__action dialog-box__action--negative" type="button">NO!</button>
+            </div>
+        </div>
+        <header class="main-header">
+            <div class="style"><a href="index.html"class=" main-header__style">LOCAL<span style="color: #8c0707;">HOST</span></a> </div>
+            <div style="justify-content: flex-end; width:100%;" >
+             <div class=" dropdown">
+                 <button class=" tag dropbtn">Services</button>
+                <div class="dropdown-content">
+                    <a href="shared-hosting.html">Shared Hosting </a>
+                    <a href="vps-hosting.html">VPS Hosting</a>
+                    <a href="cloud-hosting.html">Cloud Hosting</a>
+                    <a href="dedicated.html">Dedicated Hosting </a>
+                    <a href="reseller-hosting.html">Reseller hosting</a>
+                </div>
+              </div>
+              <a href="about-us.html"><button class="tag">About Us</button></a>
+              <button class="login"><a href="log-in.html">Log-In</a></button>
+            </div>
+        </header>
+     <section class="part-1">
+         <h2>Shared Hosting</h2>
+         <p>When building a website, start here.Our shared service delivers a powerful, proven platform that's perfect for hosting your websites.</p>
+         <a href="#target"><button class="btn-secondary">Get Started</button></a>
+     </section>
+     <section id="target"class="part-2">
+        <h1 class ="section-title">Our Shared hosting Plans</h1>
+         <div class="plan basic slide-in">
+             <h3>Basic</h3>
+             <h1>hidden</h1>
+             <h2  id="svg">$2.99/month</h2>
+             <ul>
+                 <li style="border-top:0;">1 Website</li>
+                 <li>50 GB SSD Storage</li>
+                 <li>Unmetered Bandwidth</li>
+                 <li>Free SSL Certificate</li>
+                 <li>Standard Performance</li>
+                 <li>1 Included Domain</li>
+                 <li>5 Parked Domains  </li>
+                 <li>25 Subdomains</li>
+             </ul>
+             <button class="pop-up btn-dark">Select</button>
+            </div>
+         <div class="plan plus">
+            <span class="badge" >RECOMMEND</span>
+             <h3>Plus</h3>
+             <h1>hidden</h1>
+             <h2  id="svg">$5.99/month</h2>
+             <ul>
+                <li style="border-top:0 ;">unlimite Website</li>
+                 <li>200 GB SSD Storage</li>
+                 <li>Unmetered Bandwidth</li>
+                 <li>Free SSL Certificate</li>
+                 <li>Standard Performance</li>
+                 <li>unlimited Included Domain</li>
+                 <li>20 Parked Domains  </li>
+                 <li>100 Subdomains</li>
+                 <li>Site Backup</li>
+             </ul>
+             <button class="pop-up btn-dark">Select</button>
+          </div>
+          <div class="plan pro slide-in">
+             <h3>Pro</h3>
+             <h1>hidden</h1>
+             <h2  id="svg">$12.99/month</h2>
+             <ul>
+                 <li style="border-top:0 ;">unlimite Website</li>
+                 <li>Unlimites SSD Storage</li>
+                 <li>Unmetered Bandwidth</li>
+                 <li>Free SSL Certificate</li>
+                 <li>Hign Performance</li>
+                 <li>unlimited Included Domain</li>
+                 <li>Unlimited Parked Domains  </li>
+                 <li>Unlimited Subdomains</li>
+                 <li>Domain Privacy + Protection</li>
+                 <li>Site Backup - Free for hosting term</li>
+                 <li>Dedicated IP</li>
+             </ul>
+             <button class="pop-up btn-dark">Select</button>
+         </div>
+    </section>
+    <section class="part-3">
+        <h1>Why choose Shared Hosting?</h1>
+        <div class="parent">
+           <div class="child">
+               <img src="./images/shared-01.jpg" alt="">
+               <h1>Lightning Fast Websites</h1>
+               <h2>Super-quick page loads</h2>
+           </div>
+            <div class="child">
+               <img src="./images/shared-02.jpg" alt="">
+               <h1>Free cPanel</h1>
+               <h2>Linux Web Hosting Management simplified</h2>
+        </div>
+        <div class="child">
+            <img src="./images/shared-03.jpg" alt="">
+            <h1>SNI enabled</h1>
+            <h2>SSL certificate installation made easy</h2>
+        </div>
+        <div class="child">
+            <img src="./images/shared-04.jpg" alt="">
+            <h1>SNI enabled</h1>
+            <h2>Your websites are our priority, we are here to serve you</h2>
+        </div>
+        <div class="child">
+            <img src="./images/shared-05.jpg" alt="">
+            <h1>Easy 1-click-installer</h1>
+            <h2>400+ ready-to-install apps</h2>
+        </div>
+           <div class="child">
+               <img src="./images/shared-06.jpg" alt="">
+               <h1>Enhanced Security</h1>
+               <h2>CloudFlare Protection for your business from threats</h2>
+           </div>
+           <div class="child">
+            <img src="./images/shared-07.jpg" alt="">
+            <h1>Easy Upgrades</h1>
+            <h2>Increase resources as per your need</h2>
+            </div>
+           <div class="child">
+            <img src="./images/shared-08.jpg" alt="">
+            <h1>Secure Shell Access</h1>
+            <h2>Access your Linux Shared Hosting over an encrypted channel</h2>
+        </div>
+        <div class="child">
+            <img src="./images/shared-09.jpg" alt="">
+            <h1>PHP, MySQL, Ruby & more</h1>
+            <h2>Supports leading Server Scripting languages & frameworks</h2>
+        </div>
+        <div class="child child-10">
+            <img src="./images/shared-10.jpg" alt="">
+            <h1>Free Website Migrations</h1>
+            <h2>Move your web hosting to us, with help from our experts</h2>
+        </div>
+        </div>
+    </section>
+    <section class="part-4">
+        <h1>Shared Hosting Technical Specifications</h1>
+        <div class="parent">
+            <div style="background: #d68787;" class="child">
+                <h2>Core Software</h2><hr>
+                <ul>
+                    <li>Softaculous</li>
+                    <li>Perl</li>
+                    <li>Python 2.6.6</li>
+                    <li>PHP 7.2,7.3 and 7.4</li>
+                </ul>
+            </div>
+            <div style="background: #c71c1c"class="child">
+             <h2>Databases</h2><hr>
+             <ul>
+                 <li>MySql Client 5.1</li>
+                 <li>phpMyAdmin 4.6.6</li>
+                 <li>MySQL admin tools</li>
+                 <li>MSSQL Stored Procedures</li>
+             </ul>
+         </div>
+         <div  style="background: #d64545;"class="child">
+             <h2>Additional Software</h2><hr>
+             <ul>
+                 <li>Zend Engine</li>
+                 <li>Zend Optimizer</li>
+                 <li>Zend Guard Loader</li>
+                 <li>ionCube Loader</li>
+             </ul>
+         </div>
+         <div  style="background: #ff2424"class="child">
+             <h2>Security</h2><hr>
+             <ul>
+                 <li>Hotlink Protection</li>
+                 <li>Hotlink Protection</li>
+                 <li>Leech Protection</li>
+             </ul>
+         </div>
+        </div>
+        <div class="button"><a href="shared-tech-specification.html"><button class="btn-success">VIEW ALL TECH SPECS</button></a></div>
+    </section> 
+    <footer class="main-footer" style="background-color: black;color: white;">
+        <nav style="display:flex;justify-content: space-around; text-align: center;">
+            <!-- <h2 style="font-size: 3em;font-weight: bold;"><span style="color: grey;">BLOODY</span><span style="color: red;">FANG</span></h2> -->
+            <!-- <img src="./images/ME_PHOTO.png" class="dev_image" width="150" height="150" style="border-radius:20em;"> -->
+
+            <div class="card">
+                <div class="box">
+                    <div class="front"></div>
+                    <div class="back">
+                        <div class="content">
+                            <h1>Saksham <br> Arora</h1>
+                            <h4>Front-End<br>Developer</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="flex-direction:row;">
+            <ul >
+                <li><a  style="color: white;" href="policy-service.html">Privacy Policy</a></li>
+                <li><a  style="color: white;" href="terms-of-service.html"> Terms of service</a></li>
+            </ul>
+            <ul style="flex-direction: row;">
+                <li><a style="color: white;" href="contact-us.html">Contact Us</a></li>
+            </ul><br>   
+            <ul>
+                <li style="text-align: center;"><b>SAKSHAM</b></li><br>
+                <li style="text-align: center;"><b><span>Localhost is a software created with</span><span style="color:red;font-size:2em;vertical-align:sub;">&hearts;</span><span>by SAkSHAM ARORA</b></span></li>
+            </ul>
+        </div >
+        <div style="display: flex;flex-direction: column;">
+            <h3 style="font-size: .9rem;">Follow us on Social networks</h3>
+            <div style="flex-direction: row;text-align: center;" id="social--media"> 
+                <a href="https://www.instagram.com/saksham__arora__/"><i class="fa fa-instagram"></i></a>
+                <a href="https://discord.com/channels/@me"><i class="fa fa-whatsapp"></i></a>
+                <a href="https://discord.com/channels/@me"><i class="fa fa-telegram"></i></a>
+            </div>
+            </div> 
+        </nav>
+    </footer>
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="shared.js">
+      
+    </script>
+</body>
+</html>

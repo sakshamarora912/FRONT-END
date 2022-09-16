@@ -1,0 +1,23 @@
+main{padding:60px;background: radial-gradient(circle farthest-corner at 60% 50% ,black 70%,rgb(105, 17, 17) 30%,rgb(20, 20, 17));   }
+form{padding-left:10px;}
+h1{color:white;text-shadow: 2px 2px grey;margin-top:0;font-size:2.4em;padding-bottom:10px;}
+#style_hosting a{color: black;background: white;font-weight: bolder;padding:3px;cursor: pointer;border-bottom:3px solid black;}
+form label,form input,form select{ margin:.7rem; width:50%;}
+form .checkbox{border:1px solid grey !important;background: white !important ;appearance: none;height:.9em;width:.9em;margin:0em 0em 0em 1em;}
+form .checkbox label{display: inline-block; vertical-align: bottom; }
+form .checkbox:active{background:green !important;}
+form input{padding: 3px 3px;}
+form label{color:grey; font-weight: bold;}
+form input:active,
+form input:hover{color: white; background:rgb(17, 78, 11);padding: 3px 3px; border:rgb(3, 54, 14);}
+form input.invalid,
+form :invalid{ color: white; background:#c72121; border:#691111;}
+form input:focus{outline: none;}
+form #signin{background:#691111;padding:4px;border-radius: 10px;font-size:.8em; font-weight: bold;margin-bottom: 3em;}
+form #signin a{color:white;}
+form #signin:active,form #signin:hover{color:#691111; background:white;border-radius: 10px;padding:4px;font-size:.8em;font-weight: bold;}
+form #signin a:active, form #signin a:hover{color:#691111;}
+form buttom [type="submit"]{display:block;}
+form #signup{color: black; background:grey;padding:4px;border-radius: 10px;font-size:.8em;font-weight: bold;}
+form #signup:active,
+form #signup:hover{color:grey; background:black;border-radius: 10px;padding:4px;font-size:.8em;font-weight: bold;}

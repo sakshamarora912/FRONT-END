@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vps-hosting</title>
+    <link rel = "stylesheet" href = "main.css">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="vps-hosting.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+</head>
+<style>
+ .section_1 h1{text-align: center; padding: .5em;}
+ .section_1 h2{font-size: 1em; color: #b3adad;text-align: center;}
+ .section_2{margin-left:25em;border:2px solid red;padding:2em;margin-top:5em; width:40em}
+ .section_2 input{height: 3em; width: 24em;}
+ .section_2 h2{padding-bottom:1em;}
+ .dropdown-domain{font-size: 1.3em;}
+ .section_2 h4{font-size: 1em;color: #aca6a6;padding:.5em}
+ .continue{display: flex;justify-content: center;}
+ .btn-success{font-size: 1.5em;}
+</style>
+<body style="background-color: black;color: white;">
+        <header class="main-header">
+            <div class="style"><a href="index.html"class=" main-header__style">LOCAL<span style="color: #8c0707;">HOST</span></a> </div>
+            <div style="justify-content: flex-end; width:100%;" >
+             <div class=" dropdown">
+                 <button class=" tag dropbtn">Services</button>
+                <div class="dropdown-content">
+                    <a href="shared-hosting.html">Shared Hosting </a>
+                    <a href="vps-hosting.html">VPS Hosting</a>
+                    <a href="cloud-hosting.html">Cloud Hosting</a>
+                    <a href="dedicated.html">Dedicated Hosting </a>
+                    <a href="reseller-hosting.html">Reseller hosting</a>
+                </div>
+              </div>
+              <button class="tag"><a href="about-us.html">About Us</a></button>
+            </div>
+        </header>
+        <section class="section_1"> 
+            <h1>Now we'll set up your domain</h1>
+            <h2>Your domain will be your website's address.
+                You can create a new domain, use one you already own</h2>
+        </section >
+        <section class="section_2">
+            <h2>create a new domain</h2>
+            <input type="text"> 
+            <select class="dropdown-domain">
+                <option class="domain" selected="" value="com">.com</option>
+                <option class="domain">.net</option>
+                <option class="domain">.in</option>
+                <option class="domain">.org</option>
+                <option class="domain">.co.in</option>
+                <option class="domain">.biz</option>
+                <option class="domain">.online</option>
+            </select>
+            <h4>Search available domains</h4>
+            <button class="btn-danger"> Check</button>
+        </section>
+        <section class="section_2">
+            <h2>create a new domain</h2>
+            <input type="text"> 
+            <h4>Enter your existing domain name</h4>
+            <button class="btn-danger"> Check</button>
+        </section>
+        <div class="continue"><a href="buying.html"><button class="btn-success">continue</button></a></div>
+</body>
+</html>

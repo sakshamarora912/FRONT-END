@@ -1,0 +1,185 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dedicated servers</title>
+    <link rel = "stylesheet" href = "main.css">
+    <link rel = "stylesheet" href = "shared.css">
+    <link rel="stylesheet" href="dedicated.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+</head>
+<script>
+    window.onscroll=function(){
+    let header=document.querySelector('.main-header');
+    let part_2=document.querySelector('.part-2')
+    let sliderImages = document.querySelectorAll('.slide-in');
+    if(window.scrollY>=part_2.offsetTop-80){header.classList.add('opacity');}
+    else{header.classList.remove('opacity');}
+    sliderImages.forEach(sliderImage => {
+    if (window.scrollY>=part_2.offsetTop-300) {sliderImage.classList.add('add');}
+    else {sliderImage.classList.remove('add');}
+     });}
+</script>
+<body>
+    <div class="backdrop"></div>
+        <div class="dialog-box">
+            <p class = "cross">x</p>
+            <h1 class="dialog-box_title">Do you want to continue?</h1>
+            <div class="dialog-box_action">
+                <!-- <a href="sign-up.html" class="dialog-box__action">YES!</a> -->
+                <a href="selectdomain.html" class="dialog-box__action">YES!</a>
+                <button class="dialog-box__action dialog-box__action--negative" type="button">NO!</button>
+            </div>
+        </div>
+        <header class="main-header">
+            <div class="style"><a href="index.html"class=" main-header__style">LOCAL<span style="color: #8c0707;">HOST</span></a> </div>
+            <div style="justify-content: flex-end; width:100%;" >
+             <div class=" dropdown">
+                 <button class=" tag dropbtn">Services</button>
+                <div class="dropdown-content">
+                    <a href="shared-hosting.html">Shared Hosting </a>
+                    <a href="vps-hosting.html">VPS Hosting</a>
+                    <a href="cloud-hosting.html">Cloud Hosting</a>
+                    <a href="dedicated.html">Dedicated Hosting </a>
+                    <a href="reseller-hosting.html">Reseller hosting</a>
+                </div>
+              </div>
+              <a href="about-us.html"><button class="tag">About Us</button></a>
+              <button class="login"><a href="log-in.html">Log-In</a></button>
+            </div>
+        </header>
+     <section class="part-1">
+         <h4>Dedicated Hosting</h4>
+         <h2>The ultimate power hosting</h2>
+         <h4>Unmetered bandwidth, powerful hardware, & Linux or Windows. Go on. Grab a Dedicated server.</h4>
+         <a href="#target"><button class="btn-dark">Get Started</button> </a>
+     </section>
+     <section id="target" class="part-2">
+        <h1 class ="section-title">Our Dedicated Hosting Plans</h1>
+         <div class="plan value slide-in">
+             <h3>Value Server</h3>
+             <h2>$89.99/month</h2>
+             <ul>
+                 <h1>hidden</h1>
+                 <li style="border-top: 0;">4 core / 8 thread </li>
+                 <li>Intel Xeon-D CPU </li>
+                 <li>8 GB RAM </li>
+                 <li>1 TB HDD </li>
+                 <li>Unmetered bandwidth</li>
+                 <li>5 TB Data Transfer</li>
+                 <li>Full Root Access</li>
+                 <li>Instant Provisioning</li>
+             </ul>
+             <button class="pop-up btn-dark">select</button>
+         </div>
+         <div class="plan power">
+            <span class="badge">RECOMMEND</span>
+            <h3>Power Server</h3>
+            <h2>$119.99/month</h2>
+            <ul>
+                <h1>hidden</h1>
+                <li style="border-top: 0;">8 core / 16 thread </li>
+                <li>Intel Xeon-D CPU </li>
+                <li>16 GB RAM </li>
+                <li>2TB HDD/512GB SSD</li>
+                <li>Unmetered bandwidth</li>
+                <li>10 TB Data Transfer</li>
+                 <li>Full Root Access</li>
+                 <li>Instant Provisioning</li>
+            </ul>
+            <button class="pop-up btn-dark">select</button>
+        </div>
+        <div class="plan enterprise slide-in">
+            <h3>Enterprise Server</h3>
+            <h2>$149.99/month</h2>
+            <ul>
+                <h1>hidden</h1>
+                <li style="border-top: 0;">4 core / 8 thread </li>
+                <li>Intel Xeon-D CPU </li>
+                <li>32 GB RAM </li>
+                <li>1 TB SSD</li>
+                <li>Unmetered bandwidth</li>
+                <li>15 TB Data Transfer</li>
+                 <li>Full Root Access</li>
+                 <li>Instant Provisioning</li>
+            </ul>
+            <button class="pop-up btn-dark">select</button>
+        </div>
+    </section>
+     <section class="part-3">
+         <h2>Loaded with features you'll really dig.</h2>
+         <div>
+             <div  class="parent">
+             <div class="child" style="background: #d68787;">
+                 <h4>100% server control</h4><hr>
+                 <h5>No limitations. You'll have the full system resources at your disposal.</h5>
+             </div>
+             <div class="child" style="background: #c71c1c;">
+                <h4>HDD or SDD hard drives</h4><hr>
+                <h5>Choose a hard drive based on your site's needs: space (HDD) or speed (SDD).</h5>
+            </div>
+            <div class="child" style="background: #d64545;">
+                <h4>DDoSprotection</h4><hr>
+                <h5>Data-center-level protection keeps your resources safe in case of an attack.</h5>
+            </div>
+            <div  class="child" style="background: #c71c1c;">
+                <h4>IP-based firewall</h4><hr>
+                <h5>Keep your server safe and performing optimally no matter who or what strikes.</h5>
+            </div>
+            <div  class="child" style="background: #d68787;">
+                <h4>Flexible controls</h4><hr>
+                <h5>Get cPanel and WHM on Linux or Plesk and Webmatrix on Windows. Your choice.</h5>
+            </div>
+            <div  class="child" style="background: #d68787;">
+                <h4>Advanced tech</h4><hr>
+                <h5>All dedicated servers are hosted in a US-based, Tier 3 data center.</h5>
+            </div>
+            <div  class="child" style="background: #c71c1c;">
+                <h4>Full control</h4><hr>
+                <h5>As promised, you'll call all the shots on your server configuration.</h5>
+            </div>
+            <div class="child" style="background: #d64545;">
+                <h4>Network guarantee</h4><hr>
+                <h5>We make sure your site is always up and running so your business can be too.</h5>
+            </div>
+            <div  class="child" style="background: #c71c1c;">
+                <h4>24/7/365 support</h4><hr>
+                <h5>We work when you work. Whenever that happens to be.</h5>
+            </div>
+            <div  class="child" style="background: #d68787;">
+                <h4>Full or semi-managed</h4><hr>
+                <h5>We're up to the task of fully managing your server. Or you can take it on.</h5>
+            </div>
+            </div>
+         </div>
+     </section>
+     <footer class="main-footer" style="background-color: black;color: white;">
+        <nav style="display:flex;justify-content: space-around; text-align: center;">
+            <!-- <h2 style="font-size: 3em;font-weight: bold;"><span style="color: grey;">BLOODY</span><span style="color: red;">FANG</span></h2> -->
+            <img src="./images/ME_PHOTO.png" class="dev_image" width="150" height="150" style="border-radius:20em;">
+            <div style="flex-direction:row;">
+            <ul >
+                <li><a  style="color: white;" href="policy-service.html">Privacy Policy</a></li>
+                <li><a  style="color: white;" href="terms-of-service.html"> Terms of service</a></li>
+            </ul>
+            <ul style="flex-direction: row;">
+                <li><a style="color: white;" href="contact-us.html">Contact Us</a></li>
+            </ul><br>   
+            <ul>
+                <li style="text-align: center;"><b>SAKSHAM</b></li><br>
+                <li style="text-align: center;"><b><span>Localhost is a software created with</span><span style="color:red;font-size:2em;vertical-align:sub;">&hearts;</span><span>by SAkSHAM ARORA</b></span></li>
+            </ul>
+        </div >
+        <div style="display: flex;flex-direction: column;">
+            <h3 style="font-size: .9rem;">Follow us on Social networks</h3>
+            <div style="flex-direction: row;text-align: center;"> 
+            <a href="https://www.instagram.com/saksham__arora__/"><img src="./images/instagram.png" id="social_media--logo"width="50" height="50"></a>
+            <a href="https://discord.com/channels/@me"><img src="./images/discord.png" id="social_media--logo"width="50" height="50"></a><br>
+            </div>
+            </div> 
+        </nav>
+    </footer>
+        <script src="http://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="shared.js"></script>
+    </body>
+    </html>

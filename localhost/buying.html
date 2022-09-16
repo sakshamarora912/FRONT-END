@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv = "X-UA-Compatible" content="ie=edge">
+        <title> Main </title>
+        <link rel = "stylesheet" href = "main.css">
+        <link rel = "stylesheet" href = "shared.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+    </head>
+    <style>
+        .dropdown-content{box-shadow:5px 5px 10px  white;background: black;} 
+         .dropdown-content a{color: #827f7f;}
+        body{background-color: black;color: white;}
+        .section_1 p{font-size:2em;padding: 1.8em 1em 1em 1em;text-align: center;}
+        .section_1 div{font-size: 2em;font-weight: 700;text-align: center;background: #168405;padding: .3em;width: 20em;border-radius: 22px;margin: auto;}
+        form{padding-left: 26em;}
+        form input{margin:.5em;width:22em;height:1.8em;font-size: 1em;border:0;}
+        input:focus-visible{outline: none;}
+        h1{font-size: 1.8em;margin: 2.4em 0 1em 0em;background: #af0505;padding: .2em;font-size:1.5em;width: 11em;border-radius: 7px;}
+        .dropdown-domain{font-size: 1.5em;color: white;background-color: black;border: 0;width: 3.8em;}
+        .section_2 p{font-size:.8em; color: #716e6e;}
+        span{font-weight:900;font-size: 1.2em;}
+         .btn-warning{border-radius:10px;font-size: 1.5em;width:4em}
+        .section_3 input{width:15em;}
+        .section_3 .dropdown-domain{font-size: 1em;}
+    </style>
+    <body>
+        <header class="main-header">
+            <div class="style"><a href="index.html"class=" main-header__style">LOCAL<span style="color: #8c0707;">HOST</span></a> </div>
+            <div class="heading-container" >
+             <div class=" dropdown">
+                 <button class=" tag dropbtn">Services</button>
+                <div class="dropdown-content">
+                    <a href="shared-hosting.html">Shared Hosting </a>
+                    <a href="vps-hosting.html">VPS Hosting</a>
+                    <a href="cloud-hosting.html">Cloud Hosting</a>
+                    <a href="dedicated.html">Dedicated Hosting </a>
+                    <a href="reseller-hosting.html">Reseller hosting</a>
+                </div>
+              </div>
+              <a href="about-us.html"><button class="tag">About Us</button></a>
+              <button class="login"><a href="log-in.html">Log-In</a></button>
+            </div>
+        </header>
+        <section class="section_1">
+            <p>Create your account</p>
+           
+            <div>The domain ----------------- is available!</div>
+        </section>
+        <form method="POST" action="database_2.php">
+        <section class="section_2">
+            <h1>Account Information</h2>
+            First Name <input required type="text" name="first_name"> <br>
+            Last Name <input required type="text" name="last_name"> <br>  
+            <span>(optional)</span> Business Name <input required type="text" name="business_name"><br>
+            Street Address <input required type="text"  name="street"> <br>
+            City <input required type="text"  name="city"> <br>
+             country <select style="width: 7.5em;" class="dropdown-domain" name="country_name">
+                <option class="domain" selected="" value="india">India</option>
+                <option class="domain">Unites States</option>
+                <option class="domain">Afganistan</option>
+                <option class="domain">Albania</option>
+                <option class="domain">Agernia</option>
+                <option class="domain">Australia</option>
+                <option class="domain">Austria</option>
+                <option class="domain">bahamas</option>
+                <option class="domain">Belgium</option>
+                <option class="domain">Balgaldesh</option>
+                <option class="domain">bhutan</option>
+                <option class="domain">bolvia</option>
+                <option class="domain">chile</option>
+                <option class="domain">china</option>
+                <option class="domain">colombia</option>
+                <option class="domain">denmark</option>
+                <option class="domain">Egypt</option>
+                <option class="domain">Finland</option>
+                <option class="domain">France</option>
+                <option class="domain">Germany</option>
+                <option class="domain">Ghana</option>
+                <option class="domain">Greece</option>
+                <option class="domain">Hong Kong</option>
+                <option class="domain">iceland</option>
+                <option class="domain">Ireland</option>
+                <option class="domain">Indonesia</option>
+                <option class="domain">India</option>
+                <option class="domain">Italy</option>
+                <option class="domain">Japan</option>
+                <option class="domain">Korea</option>
+                <option class="domain">liberia</option>
+                <option class="domain">malaysia</option>
+                <option class="domain">Mexiaco</option>
+                <option class="domain">Russia</option>
+                <option class="domain">Siberia</option>
+            </select><br>
+             Postal Code <input required type="text"  name="postal_code"> <br>
+             Phone Number <select class="dropdown-domain"  name="code">
+                <option class="domain" selected="" value="+91">+91</option>
+                <option class="domain">+1</option>
+                <option class="domain">+20</option>
+                <option class="domain">+211</option>
+                <option class="domain">+218</option>
+                <option class="domain">+231</option>
+                <option class="domain">+249</option>
+                <option class="domain">+250</option>
+                <option class="domain">+261</option>
+                <option class="domain">+263</option>
+                <option class="domain">+27</option>
+                <option class="domain">+66</option>
+                <option class="domain">+7</option>
+                <option class="domain">+81</option>
+                <option class="domain">+84</option>
+                <option class="domain">+850</option>
+                <option class="domain">+852</option>
+                <option class="domain">+855</option>
+                <option class="domain">+86</option>
+                <option class="domain">+880</option>
+                <option class="domain">+9291</option>
+                <option class="domain">+93</option>
+                <option class="domain">+94</option>
+                <option class="domain">+95</option>
+                <option class="domain">+966</option>
+                <option class="domain">+974</option>
+                <option class="domain">+975</option>
+                <option class="domain">+977</option>
+                </select> 
+                <input required type="number"  name="phone_no"> <br>
+                *Email<input required type="email"  name="email"><br>
+                 <p> *Your receipt will be sent to this address.</p>
+                Tax Id <input required name="tax_id">
+        </section>
+        <section class="section_3">
+            <h1>Package Information</h1>
+            Account Plan<select style="width:21em;" class="dropdown-domain" name="plan">
+            <option class="domain" selected="" value="+91"><b>BASIC </b>Shared hosting <span>$2.99/month</span></option>
+            <option class="domain"><b>PLUS </b>Shared hosting <span>$5.99/month<span></option>
+            <option class="domain"><b>PRO </b>Shared hosting <span>$11.99/month</span></option>
+            <option class="domain"><b>STANDARD </b>Vps-hosting <span>$16.49/month</span></option>
+            <option class="domain"><b>BUSINESS </b>Vps-hosting <span>$22.49/month</span></option>
+            <option class="domain"><b>PRO </b>Vps-hosting <span>$38.49/month</span></option>
+            <option class="domain"><b>PERSONAL </b>cloud-hosting <span>$7.99/month</span></option>
+            <option class="domain"><b>BUSINESS </b>Cloud-hosting <span>$9.99/month</span></option>
+            <option class="domain"><b>PRO </b>Cloud-hosting <span>$11.99/month</span></option>
+            <option class="domain"><b>VALUE SERVER </b>Dedicated-hosting <span>$89.99/month</span></option>
+            <option class="domain"><b>POWER SERVER </b>Dedicated-hosting <span>$119.99/month</span></option>
+            <option class="domain"><b> ENTERPRISE </b>Dedicated-hosting <span>$129.99/month</span></option>
+            <option class="domain"><b>BASIC </b>Reseller-hosting <span>$24.99</span></option>
+            <option class="domain"><b>ADVANCE </b>Reseller-hosting <span>$34.99</span></option>
+            <option class="domain"><b>PRO </b>Reseller-hosting <span>$44.99</span></option>
+            </select>
+        </section>
+        <section class="section_2">
+        Hosting price( in $) <input required type="number"  name="price"> <br> 
+        Primary Domain Registration <span>FREE</span><br>
+        Let's Encrypt SSL <span>FREE</span><br>
+    </section>
+         <section class="section_3">
+             <h1>Payment Information</h1>
+             <h2 style="font-size: 1.2em;">Pay by Credit / Debit Card</h2>
+             Credit Card Number <input required type="number"  maxlength="16" name="credit"> <br> 
+             Signature/CVV2 code <input required type="number"  maxlength="3"  name="cvv"> <br> 
+             Expiration Date <input required type="date" name="date">
+         </section>
+       <input class="btn-warning"type="submit">
+        </body>
+        </form>
+          </html>

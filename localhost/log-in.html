@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>log-in</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+    <script>
+        function notWorking(){alert("NOT WORKING!")}
+        function validateform(){
+        if(document.forms["myform"]["username"].value=="sakshamarora" && document.forms["myform"]["password"].value=="helloworld" ){
+            window.open("http://localhost/test/db.php")
+        }
+        else{alert ("oops something is wrong")}}
+        </script>
+</head>
+<style>
+    body{background: url(./images/about-us.jpg);text-align: center;}
+    h1{color: white;font-size:2em;font-weight: 500;margin: .5em 0 1em 0;}
+    .container{background:black;width: 30em;height: 26em;margin:8sem auto 3em auto;; padding:1em 2em;}
+    .main-header__style{color: grey;font-size: 2.5em;}
+    .main-header__style:hover{color:grey !important;font-size: 2.7em!important}
+    a{color: white;text-align: center; font-size: .8em;}
+    /* a:hover,a:active{color: black;} */
+    input{padding:.8em; border:1px solid white;width:100%;height:4em}
+    input:focus{outline: none;}
+    .btn-danger{margin: 1em 11em;border-radius: 6px;}
+    .forgot-password:hover,.forgot-passowrd:active{color: white;}
+    .sign-up:hover{color:black!important;text-decoration: none!important;}
+    input:valid{border: 2px solid green;}
+    input:invalid{border: 2px solid red;}
+
+    @media only screen and (max-width: 400px) {
+        .main-header__style {font-size: 1em;}
+        h1 {font-size: .8em; margin: 0.5em 0 1em 0;}
+        input {padding: 0.4em;height:2.5em;}
+        .container {width: 24em!important;height: 17em;margin: 9em auto 1em auto; padding: 1em 2em;}
+        .btn-danger {margin: 1em 10em;font-size: .8em;}
+        a {font-size: .7em;}
+}
+    
+</style>
+<body>
+    <section class="container">
+        <div class="style"><a href="index.html"class=" main-header__style">LOCAL<span style="color: #8c0707;">HOST</span></a> </div>
+             <h1>Log In</h1>
+             <form name="myform" method="GET"> 
+             <input name="username" type="text" required="required" placeholder="Email Address or username" ><br><br>
+             <input name="password" type="password"pattern=".{8,12}" required="required" placeholder="Password (8 characters minimum)"><br>
+             <button class="btn-danger" onclick="validateform()">Login</button>
+             <a class="forgot-password" href="#"  onclick="notWorking()"> Forgot password?</a>
+            </form>   
+             </section>
+    <div>
+        <a class="sign-up" href="selectdomain.html">Not a member yet? Sign up now?</a>
+    </div>
+</body>
+</html>

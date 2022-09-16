@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS 3D Image Hover Effects | 3D Flip Card Effect On Hover
+</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<style>
+.card{background-color:black!important;}
+.box{position:absolute;width:12em;height:12em;transform-style:preserve-3d;transition:1s;}
+.front, .back{position:absolute;top:0px;left:0px;width:70%;height:60%;}
+.front{background-image:url(./images/ME_PHOTO.png);background-size:100% 100%;}
+.back{transform:rotateY(180deg);transform-style:preserve-3d}
+.back .content{background: black;position:absolute;top:15%;left:0px;padding:10px;color:#fff;transform:translateZ(100px);width:100%;}
+.card:hover .box{transform:rotateY(180deg);}
+</style>
+	<div class='card'>
+		<div class='box'>
+			<div class="front"></div>
+			<div class="back">
+				<div class="content">
+					<h3>SAKSHAM ARORA</h3>
+					<p>Front-end Developer</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
