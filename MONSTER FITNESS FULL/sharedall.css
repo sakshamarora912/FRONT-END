@@ -1,0 +1,79 @@
+.main-header {
+    background: black;
+    padding: 0em .6em 0 .6em;
+    text-decoration: none;
+    position: sticky;
+    height: 5em;
+    display: flex;
+}
+
+.main-header div {
+    display: flex;
+}
+
+.main-header__style {
+    text-decoration: none;
+    padding-top: 4px;
+    font-weight: 900;
+    font-size: 1.5em;
+    color: black;
+}
+
+.main-header__style:hover {
+    text-decoration: none;
+    color: black !important;
+    font-size: 1.6em;
+}
+
+.heading-container {
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.tag {
+    padding: 2em;
+    text-decoration: none;
+    color: white;
+    ;
+}
+
+.sec {
+    padding: 7em;
+    background: black;
+    color: white;
+    display: grid;
+    grid-template-columns: auto auto
+}
+
+#sub_1 {
+    background: rgb(71, 70, 70);
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+}
+
+.plans {
+    margin: 1em;
+    border: 1.5px solid white;
+    color: white;
+    width: 23.5em;
+    height: 40em;
+}
+
+nav {
+    text-align: center;
+}
+
+p {
+    margin: 3em !important;
+    font-size: medium !important;
+    text-align: center!important;
+}
+
+.tag:hover {
+    color: grey;
+    text-decoration: none;
+}
